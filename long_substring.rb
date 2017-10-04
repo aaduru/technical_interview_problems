@@ -10,26 +10,43 @@
 
 
 def length_of_longest_substring(s)
+
     long_sub_string = ''
     len = 0
     temp = 0
+
     s.each_char do |c|
-      p long_sub_string
+
         if long_sub_string.include?(c)
+
+          index = long_sub_string.index(c)
+
+          if long_sub_string.length > 1
+            long_sub_string = long_sub_string.slice(index+1 ,long_sub_string.length)
+          else
             long_sub_string = ''
-            if temp < len
-              temp = 0
-            else
-              len = temp
-              temp = 0
-            end
-            next
+
+          end
+
+          long_sub_string += c
+          if len < temp
+            len = temp
+          end
+          temp = long_sub_string.length
+
+
         else
-            long_sub_string += c
-            temp += 1
+          long_sub_string += c
+
+          temp += 1
+
         end
     end
-    len
+    return temp if len <= temp
+    return len if temp <= len
 end
 
+p length_of_longest_substring("dvdf")
 p length_of_longest_substring("abcabcbb")
+p length_of_longest_substring("bbbb")
+p length_of_longest_substring("cdd")
