@@ -100,3 +100,49 @@ def add_two_numbers(l1, l2)
     return result_array
 
 end
+
+
+def merge_two_lists2(l1, l2)
+    merged_list = ListNode.new(0)
+    if l1.val == nil && l2.val == nil
+        raise "no data"
+    end
+
+    l1_array = []
+    l2_array = []
+    until l1.next.nil?
+        l1_array << l1.val
+    end
+    until l2.next.nil?
+        l2_array << l2.val
+    end
+    result_array = []
+    until l1_array.length ==0 || l2_array.length == 0
+        if l1_array[0] < l2_array[0]
+            result_array << l1_array.shift
+        else
+            result_array << l2_array.shift
+        end
+    end
+
+    i = 0
+    first_node = ListNode.new(0)
+    curr_node = first_node
+
+    while i < result_array.length
+        temp = result_array[i]
+        curr_node.val = temp
+        curr_node.next = ListNode.new(0)
+        curr_node = curr_node.next
+        i = i+1
+    end
+    curr_node = first_node
+    arr = []
+    while (!curr_node.next.nil?)
+        arr << curr_node.val
+        curr_node = curr_node.next
+    end
+    return arr
+
+
+end
