@@ -76,3 +76,17 @@ end
 puts palindrome_dictionary(["mad","dam","mad","cookie"])
 #puts is_palindrome?("reverse")
 #puts is_palindrome?("madam
+
+convert  it into a Hash that way n + n(2k2)
+ba aab
+ba dcab
+ba dcdab
+
+
+leet code tries
+
+records and logs
+
+dev ops
+
+scalability ,
