@@ -8,11 +8,8 @@ let canvas = document.getElementById("tictactoe");
 let ctx = canvas.getContext('2d');
 let msg = document.getElementById("message");
 let cell = 100;
-canvas.width = canvas.height = 3 * cell;
+
 // store the board as array in the game
-// use binary pattern to identify the win patterns
-
-
 
 // let tttboard = [
 //                   0,0,0,
@@ -24,7 +21,7 @@ let tttboard = [
                   0,0,-1,
                   -1,0,1,
 ];
-
+// use binary pattern to identify the win patterns
 let winPattern = [
                   0b111000000, 0b000111000, 0b000000111, //rows
                   0b100100100, 0b010010010, 0b001001001, //columns
@@ -32,6 +29,38 @@ let winPattern = [
 ];
 
 let BLANK = 0, X = 1, O = -1;
+
+// Mouse functionalities
+
+let mouse = {
+  x: -1,
+  y: -1,
+}
+
+canvas.width = canvas.height = 3 * cell;
+
+canvas.addEventListener('mouseout', function () {
+  mouse.x = mouse.y = -1;
+});
+
+canvas.addEventListener('mousemove', function (e) {
+  let x = e.pageX - canvas.offsetLeft,
+      y = e.pageY - canvas.offsetTop;
+
+  mouse.x = x;
+  mouse.y = y;
+
+  //console.log(x,y);
+});
+canvas.addEventListener('click', function (e) {
+  let x = e.pageX - canvas.offsetLeft,
+      y = e.pageY - canvas.offsetTop;
+
+  mouse.x = x;
+  mouse.y = y;
+
+  //console.log(x,y);
+});
 
 function draw() {
   ctx.clearRect(0,0,canvas.width,canvas.height);
