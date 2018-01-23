@@ -37,6 +37,8 @@ let mouse = {
   y: -1,
 }
 
+let currentPlayer = X;
+
 canvas.width = canvas.height = 3 * cell;
 
 canvas.addEventListener('mouseout', function () {
@@ -55,14 +57,21 @@ canvas.addEventListener('mousemove', function (e) {
   //console.log(getCellByCoords(x,y));
 });
 canvas.addEventListener('click', function (e) {
-  let x = e.pageX - canvas.offsetLeft,
-      y = e.pageY - canvas.offsetTop;
 
-  mouse.x = x;
-  mouse.y = y;
-
-  //console.log(x,y);
+  play(getCellByCoords(mouse.x,mouse.y));
 });
+
+function play(c) {
+  console.log(tttboard[c]);
+  if (tttboard[c] != BLANK) {
+    msg.textContent = 'Position Taken';
+    return;
+  }
+  tttboard[c] = currentPlayer;
+
+  currentPlayer *= -1
+  console.log('success');
+}
 
 function draw() {
   ctx.clearRect(0,0,canvas.width,canvas.height);
