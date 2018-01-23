@@ -51,6 +51,8 @@ canvas.addEventListener('mousemove', function (e) {
   mouse.y = y;
 
   //console.log(x,y);
+  //gives the position of the mouse
+  //console.log(getCellByCoords(x,y));
 });
 canvas.addEventListener('click', function (e) {
   let x = e.pageX - canvas.offsetLeft,
@@ -149,6 +151,16 @@ function getCellCoords(c){
     'x': x,
     'y': y,
   };
+}
+
+function getCellByCoords(x,y){
+
+  return (Math.floor(x / cell) % 3) + (Math.floor(y / cell) * 3)
+
+  // return {
+  //   'x': Math.floor(x / cell),
+  //   'y': Math.floor(y / cell),
+  // };
 }
 
 draw();
