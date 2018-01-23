@@ -38,6 +38,8 @@ let mouse = {
 }
 
 let currentPlayer = X;
+let gameOver = false;
+
 
 canvas.width = canvas.height = 3 * cell;
 
@@ -62,17 +64,44 @@ canvas.addEventListener('click', function (e) {
 });
 
 function play(c) {
-  console.log(tttboard[c]);
+  //console.log(tttboard[c]);
+
+  if (gameOver) return; 
   if (tttboard[c] != BLANK) {
     msg.textContent = 'Position Taken';
     return;
   }
   tttboard[c] = currentPlayer;
 
+
+  let winCheck = checkWin(currentPlayer);
+
+  if (winCheck != 0){
+    gameOver = true;
+    msg.textContent = ((currentPlayer == X)? 'X' : 'O') + 'wins';
+  }
+
   currentPlayer *= -1
-  console.log('success');
+  //console.log('success');
 }
 
+function checkWin(player) {
+  let playerMapBitMask = 0;
+  for(let i = 0; i < tttboard.length; i++){
+    playerMapBitMask <<= 1;
+    if (tttboard[i] == player ){
+      playerMapBitMask += 1;
+    }
+    //console.log(playerMapBitMask);
+  }
+
+  for(let i = 0 ; i < winPattern.length; i++){
+    if ((playerMapBitMask & winPattern[i]) == winPattern[i]){
+      return winPattern[i];
+    }
+  }
+  return 0;
+}
 function draw() {
   ctx.clearRect(0,0,canvas.width,canvas.height);
   drawBoard();
