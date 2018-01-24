@@ -39,6 +39,7 @@ let mouse = {
 
 let currentPlayer = X;
 let gameOver = false;
+let winCells = [];
 
 
 canvas.width = canvas.height = 3 * cell;
@@ -78,13 +79,19 @@ function play(c) {
     return;
   }
   tttboard[c] = currentPlayer;
-
-
   let winCheck = checkWin(currentPlayer);
 
   if (winCheck != 0){
     gameOver = true;
     msg.textContent = ((currentPlayer == X)? 'X' : 'O') + 'wins';
+
+    let bit = 1
+    for(let i = tttboard.length -1 ; i >= 0; i--){
+      if ((bit & winCheck) === bit) {
+        winCells.push(i);
+      }
+        bit <<= 1;
+    }
     return;
   } else if (tttboard.indexOf(BLANK) == -1 ) {
     gameOver = true;
@@ -116,32 +123,50 @@ function checkWin(player) {
 }
 function draw() {
   ctx.clearRect(0,0,canvas.width,canvas.height);
+  drawMouseHighlight();
+  drawWinHighlight();
   drawBoard();
   fillBoard();
-  drawMouseHighlight();
   //function to highlight the getCellCoords
 
   function drawMouseHighlight(){
+    if (gameOver) return;
     let cellNum = getCellByCoords(mouse.x, mouse.y);
     let cellCoords = getCellCoords(cellNum);
 
-    ctx.fillStyle = 'rgba(255, 255, 255, 0.3)';
+    if (tttboard[cellNum] == BLANK ) {
+      ctx.fillStyle = 'rgba(255, 255, 255, 0.3)';
+      ctx.fillRect(cellCoords.x,cellCoords.y,cell,cell);
 
-    ctx.fillRect(cellCoords.x,cellCoords.y,cell,cell);
+      ctx.save();
 
-    ctx.save();
+      ctx.strokeStyle = 'rgba(255, 255, 255, 0.8)';
+      ctx.translate(cellCoords.x + cell / 2, cellCoords.y + cell / 2);
 
-    ctx.strokeStyle = 'rgba(255, 255, 255, 0.8)';
-    ctx.translate(cellCoords.x + cell / 2, cellCoords.y + cell / 2);
+      if (currentPlayer == X){
+        drawX();
+      }else {
+        drawO();
+      }
 
-    if (currentPlayer == X){
-      drawX();
+      ctx.restore();
     }else {
-      drawO();
+      ctx.fillStyle = 'rgba(255, 0, 0, 0.3)';
+      ctx.fillRect(cellCoords.x,cellCoords.y,cell,cell);
     }
 
-    ctx.restore();
 
+  }
+
+
+  function drawWinHighlight(){
+    if (gameOver){
+      ctx.fillStyle = 'rgba(0,255,0,0.3)';
+      winCells.forEach(function (i){
+        let cellcors = getCellCoords(i);
+        ctx.fillRect(cellcors.x,cellcors.y,cell,cell);
+      });
+    }
   }
 
   function drawBoard(){
