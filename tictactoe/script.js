@@ -11,16 +11,16 @@ let cell = 100;
 
 // store the board as array in the game
 
-// let tttboard = [
-//                   0,0,0,
-//                   0,0,0,
-//                   0,0,0,
-// ];
 let tttboard = [
-                  1,0,0,
-                  0,0,-1,
-                  -1,0,1,
+                  0,0,0,
+                  0,0,0,
+                  0,0,0,
 ];
+// let tttboard = [
+//                   1,0,0,
+//                   0,0,-1,
+//                   -1,0,1,
+// ];
 // use binary pattern to identify the win patterns
 let winPattern = [
                   0b111000000, 0b000111000, 0b000000111, //rows
@@ -63,6 +63,12 @@ canvas.addEventListener('click', function (e) {
   play(getCellByCoords(mouse.x,mouse.y));
 });
 
+displayTurn();
+
+function displayTurn(){
+  msg.textContent = ((currentPlayer == X)? 'X' : 'O') + ' \'s turn';
+}
+
 function play(c) {
   //console.log(tttboard[c]);
 
@@ -79,12 +85,15 @@ function play(c) {
   if (winCheck != 0){
     gameOver = true;
     msg.textContent = ((currentPlayer == X)? 'X' : 'O') + 'wins';
+    return;
   } else if (tttboard.indexOf(BLANK) == -1 ) {
     gameOver = true;
     msg.textContent = 'Tie';
+    return;
   }
 
   currentPlayer *= -1
+  displayTurn();
   //console.log('success');
 }
 
