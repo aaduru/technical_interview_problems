@@ -66,7 +66,7 @@ canvas.addEventListener('click', function (e) {
 function play(c) {
   //console.log(tttboard[c]);
 
-  if (gameOver) return; 
+  if (gameOver) return;
   if (tttboard[c] != BLANK) {
     msg.textContent = 'Position Taken';
     return;
@@ -79,6 +79,9 @@ function play(c) {
   if (winCheck != 0){
     gameOver = true;
     msg.textContent = ((currentPlayer == X)? 'X' : 'O') + 'wins';
+  } else if (tttboard.indexOf(BLANK) == -1 ) {
+    gameOver = true;
+    msg.textContent = 'Tie';
   }
 
   currentPlayer *= -1
