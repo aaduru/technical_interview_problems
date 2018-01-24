@@ -118,6 +118,31 @@ function draw() {
   ctx.clearRect(0,0,canvas.width,canvas.height);
   drawBoard();
   fillBoard();
+  drawMouseHighlight();
+  //function to highlight the getCellCoords
+
+  function drawMouseHighlight(){
+    let cellNum = getCellByCoords(mouse.x, mouse.y);
+    let cellCoords = getCellCoords(cellNum);
+
+    ctx.fillStyle = 'rgba(255, 255, 255, 0.3)';
+
+    ctx.fillRect(cellCoords.x,cellCoords.y,cell,cell);
+
+    ctx.save();
+
+    ctx.strokeStyle = 'rgba(255, 255, 255, 0.8)';
+    ctx.translate(cellCoords.x + cell / 2, cellCoords.y + cell / 2);
+
+    if (currentPlayer == X){
+      drawX();
+    }else {
+      drawO();
+    }
+
+    ctx.restore();
+
+  }
 
   function drawBoard(){
     ctx.strokeStyle = 'white';
