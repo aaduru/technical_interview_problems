@@ -36,9 +36,15 @@ function memoryFlipThis(tile,val){
     if (memory_values.length == 0) {
       memory_values.push(val);
       memory_tile_ids.push(tile.id);
+    // if the memory values array already has one value in it then the else condition gets executed
+    // one card is already clicked
     } else if (memory_values.length == 1) {
+      // values are pushed into the arrays
+
       memory_values.push(val);
       memory_tile_ids.push(tile.id);
+      // condition to check if both cards are a match
+      // if they are match then they remain flipped over
       if (memory_values[0] == memory_values[1]) {
         tiles_flipped += 2;
         //clear both arrays
@@ -46,10 +52,14 @@ function memoryFlipThis(tile,val){
         memory_tile_ids = [];
         // check to see if the whole board is cleared
         if (tiles_flipped == memory_array.length) {
-          alert("Board Cleared... Generating New Board");
+          alert("Congratulations you have Won!!!");
           document.getElementById('memory_board').innerHTML = "";
           newBoard();
         }
+        // if the two cards are not a match
+        // the cards are flipped back after 700 ms
+        // clear the arrays
+        
       } else {
         function flip2Back() {
           let tile_1 = document.getElementById(memory_tile_ids[0]);
