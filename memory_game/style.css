@@ -19,3 +19,10 @@ div#memory_board > div {
   text-align: center;
 
 }
+
+p {
+  color: red;
+  font-size: 30px;
+  text-align: center;
+  margin: 0px;
+}

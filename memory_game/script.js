@@ -59,7 +59,7 @@ function memoryFlipThis(tile,val){
         // if the two cards are not a match
         // the cards are flipped back after 700 ms
         // clear the arrays
-        
+
       } else {
         function flip2Back() {
           let tile_1 = document.getElementById(memory_tile_ids[0]);
@@ -79,3 +79,7 @@ function memoryFlipThis(tile,val){
 }
 
 newBoard();
+
+//next to work on
+// 3d flip cards
+// button to start a timer and when the game gets over display the timer
