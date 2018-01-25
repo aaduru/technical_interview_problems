@@ -23,4 +23,49 @@ function newBoard() {
   document.getElementById('memory_board').innerHTML = output;
 }
 
+
+function memoryFlipThis(tile,val){
+  // code will not run if the below if condition does not match
+  // the tile inner html should be empty and the memory values array length should be less than 2
+  // when the user clicks on any of the card and if returns true then the below code gets executed.
+  if (tile.innerHTML == "" && memory_values.length < 2){
+    // the tile's background is set to white and the value is displayed
+    tile.style.background = '#FFF';
+    tile.innerHTML = val;
+    // check the memory values array which is 0 by default and the values are pushed into the arrays
+    if (memory_values.length == 0) {
+      memory_values.push(val);
+      memory_tile_ids.push(tile.id);
+    } else if (memory_values.length == 1) {
+      memory_values.push(val);
+      memory_tile_ids.push(tile.id);
+      if (memory_values[0] == memory_values[1]) {
+        tiles_flipped += 2;
+        //clear both arrays
+        memory_values =[];
+        memory_tile_ids = [];
+        // check to see if the whole board is cleared
+        if (tiles_flipped == memory_array.length) {
+          alert("Board Cleared... Generating New Board");
+          document.getElementById('memory_board').innerHTML = "";
+          newBoard();
+        }
+      } else {
+        function flip2Back() {
+          let tile_1 = document.getElementById(memory_tile_ids[0]);
+          let tile_2 = document.getElementById(memory_tile_ids[1]);
+          tile_1.style.background = 'url(tile_bg.jpg) no-repeat';
+          tile_1.innerHTML = "";
+          tile_2.style.background = 'url(tile_bg.jpg) no-repeat';
+          tile_2.innerHTML = "";
+          //clear both arrays
+          memory_values =[];
+          memory_tile_ids = [];
+        }
+        setTimeout(flip2Back, 700);
+      }
+    }
+  }
+}
+
 newBoard();
