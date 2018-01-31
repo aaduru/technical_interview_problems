@@ -1,3 +1,5 @@
+let startTime, endTime;
+
 function myFunction(){
 alert("Hello world!");
 }
@@ -6,7 +8,6 @@ alert("Hello world!");
 //     document.getElementById("Clock").innerHTML =
 //     new Date().toLocaleTimeString();
 // }
-
 
 function myClock() {
     let today = new Date();
@@ -24,8 +25,20 @@ function checkTime(i) {
     return i;
 }
 
-function myGameOver() {
+function myClock2() {
+  startTime = new Date();
+  console.log("time started");
+};
 
+function myGameOver() {
+  endTime = new Date();
+  var timeDiff = endTime - startTime;
+  let seconds = Math.round(timeDiff/1000);
+  console.log("game over");
+  console.log("calculating Time");
+  console.log("start time  " + startTime);
+  console.log("end Time" + endTime);
+  console.log("it took  " + seconds + " seconds to play the game" )
 }
 
 //myFunction();
