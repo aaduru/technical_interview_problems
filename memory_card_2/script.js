@@ -1,8 +1,8 @@
 let startTime, endTime;
 
-function myFunction(){
-alert("Hello world!");
-}
+// function myFunction(){
+// alert("Hello world!");
+// }
 
 // function myClock() {
 //     document.getElementById("Clock").innerHTML =
