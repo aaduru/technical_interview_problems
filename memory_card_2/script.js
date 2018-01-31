@@ -25,7 +25,8 @@ function checkTime(i) {
     return i;
 }
 
-function myClock2() {
+function gameStart() {
+  myClock();
   startTime = new Date();
   console.log("time started");
 };
@@ -39,6 +40,8 @@ function myGameOver() {
   console.log("start time  " + startTime);
   console.log("end Time" + endTime);
   console.log("it took  " + seconds + " seconds to play the game" )
+
+  alert("game over!!! you took " + seconds + " seconds to play the game");
 }
 
 //myFunction();
