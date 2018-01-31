@@ -1,4 +1,4 @@
-let startTime, endTime;
+let startTime, endTime, time;
 
 // function myFunction(){
 // alert("Hello world!");
@@ -18,7 +18,7 @@ function myClock() {
     s = checkTime(s);
     document.getElementById('Clock').innerHTML =
     h + ":" + m + ":" + s;
-    let t = setTimeout(myClock, 500);
+    time = setTimeout(myClock, 500);
 }
 function checkTime(i) {
     if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
@@ -35,6 +35,7 @@ function myGameOver() {
   endTime = new Date();
   var timeDiff = endTime - startTime;
   let seconds = Math.round(timeDiff/1000);
+  clearTimeout(time);
   console.log("game over");
   console.log("calculating Time");
   console.log("start time  " + startTime);
