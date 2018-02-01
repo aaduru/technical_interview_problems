@@ -45,4 +45,7 @@ function myGameOver() {
   alert("game over!!! you took " + seconds + " seconds to play the game");
 }
 
+
+
+
 //myFunction();
