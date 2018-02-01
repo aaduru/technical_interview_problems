@@ -2,6 +2,9 @@ let memory_array = ['A','A','B','B','C','C','D','D','E','E','F','F','G','G','H',
 let memory_values = [];
 let memory_tile_ids = [];
 let tiles_flipped = 0;
+let count = 0;
+let gameover = false;
+let timestart = false;
 
 // for time
 let startTime, endTime, time;
@@ -24,7 +27,7 @@ function newBoard() {
     output += '<div id="tile_'+i+'" onclick="memoryFlipThis(this,\''+memory_array[i]+'\')"></div>';
   }
   document.getElementById('memory_board').innerHTML = output;
-  gameStart();
+  //gameStart();
 }
 
 
@@ -32,6 +35,11 @@ function memoryFlipThis(tile,val){
   // code will not run if the below if condition does not match
   // the tile inner html should be empty and the memory values array length should be less than 2
   // when the user clicks on any of the card and if returns true then the below code gets executed.
+
+  if (gameover == false & timestart == false) {
+    timestart = true;
+    gameStart();
+  }
   if (tile.innerHTML == "" && memory_values.length < 2){
     // the tile's background is set to white and the value is displayed
     tile.style.background = '#FFF';
@@ -113,15 +121,20 @@ function gameStart() {
 function myGameOver() {
   endTime = new Date();
   var timeDiff = endTime - startTime;
-  let seconds = Math.round(timeDiff/1000);
-  clearTimeout(time);
-  console.log("game over");
   console.log("calculating Time");
   console.log("start time  " + startTime);
   console.log("end Time" + endTime);
+  console.log("time diff " + timeDiff);
+  let seconds = Math.round(timeDiff/1000);
+  clearTimeout(time);
+  console.log("game over");
   console.log("it took  " + seconds + " seconds to play the game" )
 
   alert("game over!!! you took " + seconds + " seconds to play the game");
+  gameover = true;
+  gameover = false;
+  timestart = false;
+  
 }
 
 
