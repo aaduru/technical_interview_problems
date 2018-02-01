@@ -22,7 +22,17 @@ div#memory_board > div {
 
 p {
   color: red;
+  font-size: 50px;
+  text-align: center;
+  margin: 0px;
+  padding: 5px;
+}
+
+p#Clock {
+  color: black;
   font-size: 30px;
   text-align: center;
   margin: 0px;
+  padding: 5px;
+  padding-bottom: 30px;
 }
