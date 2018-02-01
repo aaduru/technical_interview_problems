@@ -24,6 +24,7 @@ function newBoard() {
     output += '<div id="tile_'+i+'" onclick="memoryFlipThis(this,\''+memory_array[i]+'\')"></div>';
   }
   document.getElementById('memory_board').innerHTML = output;
+  gameStart();
 }
 
 
@@ -57,6 +58,7 @@ function memoryFlipThis(tile,val){
         if (tiles_flipped == memory_array.length) {
           alert("Congratulations you have Won!!!");
           document.getElementById('memory_board').innerHTML = "";
+          myGameOver();
           newBoard();
         }
         // if the two cards are not a match
@@ -85,6 +87,7 @@ newBoard();
 
 
 // for time
+
 function myClock() {
     let today = new Date();
     let h = today.getHours();
