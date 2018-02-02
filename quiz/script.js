@@ -4,12 +4,16 @@ let questions = [
       answer: "b"
      },
      {
-          prompt: "What color are Bananas?\n(a) Teal\n\ (b) Magenta\n(c) Yellow",
-          answer: "c"
+      prompt: "When a user views a page containing a JavaScript program, which machine actually executes the script?\n(a) The Users machine running a Web browser\n\ (b) The Web server\n(c) A central machine deep within Netscape s corporate offices\n (d)None of the above",
+      answer: "a"
      },
      {
-          prompt: "What color are strawberries?\n(a) Yellow\n\ (b) Red\n(c) Blue",
-          answer: "b"
+      prompt: "______ JavaScript is also called client-side JavaScript.\n(a) Microsoft\n\ (b) Navigator\n(c) LiveWire\n (d)Native ",
+      answer: "b"
+    },
+     {
+      prompt: "__________ JavaScript is also called server-side JavaScript.\n(a) Microsoft\n\ (b) Navigator\n(c) LiveWire\n (d)Native ",
+      answer: "c"
      }
 ];
 let score = 0;
