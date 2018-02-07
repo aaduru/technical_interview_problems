@@ -1,0 +1,1533 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1561\cocoasubrtf100
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fnil\fcharset0 Menlo-Regular;\f2\fnil\fcharset0 Menlo-Bold;
+\f3\fnil\fcharset0 STIXGeneral-Regular;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red255\green255\blue255;\red27\green29\blue31;
+\red235\green236\blue237;\red36\green38\blue41;\red13\green0\blue129;\red14\green60\blue38;\red246\green246\blue246;
+\red180\green36\blue25;\red192\green192\blue192;\red153\green153\blue153;\red140\green135\blue234;\red46\green174\blue187;
+\red47\green180\blue29;\red64\green11\blue217;\red159\green160\blue28;\red200\green20\blue201;}
+{\*\expandedcolortbl;;\csgray\c0;\csgray\c100000;\cssrgb\c14118\c15294\c16078;
+\cssrgb\c93725\c94118\c94510;\cssrgb\c18824\c20000\c21176;\cssrgb\c6275\c6275\c58039;\cssrgb\c4706\c29412\c20000;\cssrgb\c97255\c97255\c97255;
+\cssrgb\c76409\c21698\c12524;\cssrgb\c79889\c79890\c79889;\csgenericrgb\c60000\c60000\c60000;\cssrgb\c61735\c61365\c93538;\cssrgb\c20196\c73240\c78250;
+\cssrgb\c20238\c73898\c14947;\cssrgb\c32308\c18668\c88227;\cssrgb\c68468\c68012\c14208;\cssrgb\c83396\c23075\c82664;}
+\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 flex project\
+\
+onscroll="onScroll()"\
+{\field{\*\fldinst{HYPERLINK "http://www.quackit.com/css/color/tools/css_color_scheme_generator.cfm"}}{\fldrslt http://www.quackit.com/css/color/tools/css_color_scheme_generator.cfm}} \
+\
+\
+https://docs.google.com/presentation/u/0/\
+\
+https://github.com/Seedstars/django-react-redux-base \
+\
+\
+http://geezhawk.github.io/using-react-with-django-rest-framework\
+\
+https://www.reddit.com/r/django/comments/43y4wd/a_tutorial_on_using_django_rest_framework_with/\
+\
+\
+http://www.marinamele.com/taskbuster-django-tutorial/install-and-configure-posgresql-for-django\
+\
+https://www.youtube.com/user/noobtoprofessional\
+\
+\
+user authentication\
+\
+http://iheanyi.com/journal/user-registration-authentication-with-django-django-rest-framework-react-and-redux/\
+\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\qr\partightenfactor0
+\cf0 https://godjango.com/41-start-your-api-django-rest-framework-part-1/\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 \
+\
+\
+\
+\
+\
+\
+https://github.com/bigsassy/drf-react-redux\
+\
+https://www.youtube.com/watch?v=wU-KUapq1kQ\
+\
+\
+\
+https://news.ycombinator.com/item?id=12805514\
+\
+\
+kwlas63eg)oyv4b2xx)+ru^7vzjm7!30l+i@rrls%9uhvllwjw\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f1\fs22 \cf2 \cb3 \CocoaLigature0 heroku ps:scale web=1\
+\
+heroku python backend/manage.py makemigrations\
+heroku run python backend/manage.py migrate\
+\
+heroku run python backend/manage.py loaddata tracks.json
+\f0\fs24 \cf0 \cb1 \CocoaLigature1 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 \
+\
+\
+'NAME': 'audiocloud',\
+        'USER': 'admincloud',\
+        'PASSWORD': 'password',\
+\
+  username:"admin",\
+        password: "password123",\
+        logged_in: true\
+\
+\pard\pardeftab720\partightenfactor0
+
+\f1\fs26 \cf4 \cb5 \expnd0\expndtw0\kerning0
+psql --username=postgres\
+\pard\pardeftab720\partightenfactor0
+\cf6 \\\cf7 connect\cf6  audio cloud\
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs24 \cf0 \cb1 \kerning1\expnd0\expndtw0 \\dt\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f1\fs22 \cf2 \cb3 \CocoaLigature0 insert into auth_user (id, password, username, is_superuser,first_name,last_name,email,is_staff,is_active,date_joined) values (1, 'password123', 'admin','t','test','test','test','t','t','12/10/2016');\
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs24 \cf0 \cb1 \CocoaLigature1 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 \
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f1\fs22 \cf2 \cb3 \CocoaLigature0 git fetch origin master\
+git reset --hard FETCH_HEAD\
+git clean -df
+\f0\fs24 \cf0 \cb1 \CocoaLigature1 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 \
+\
+\pard\pardeftab720\partightenfactor0
+
+\f1\fs26 \cf4 \cb5 \expnd0\expndtw0\kerning0
+python manage.py flush  to delete data
+\f0\fs24 \cf0 \cb1 \kerning1\expnd0\expndtw0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f1\fs22 \cf2 \cb3 \CocoaLigature0 python manage.py loaddata fixtures.json\
+\
+python manage.py createsuperuser\
+\
+python manage.py makemigrations\
+python manage.py migrate\
+\
+ python manage.py runserver
+\f0\fs24 \cf0 \cb1 \CocoaLigature1 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 \
+\
+http://geezhawk.github.io/user-authentication-with-react-and-django-rest-framework\
+\
+http://geezhawk.github.io/user-authentication-with-react-and-django-rest-framework\
+\
+\
+\pard\pardeftab720\partightenfactor0
+
+\fs28 \cf8 \cb9 \expnd0\expndtw0\kerning0
+http://iheanyi.com/journal/user-registration-authentication-with-django-django-rest-framework-react-and-redux/\
+\
+\
+https://github.com/iheanyi/django-react-redux-users-tutorial\
+\
+https://docs.djangoproject.com/en/dev/intro/tutorial01/\
+\
+https://github.com/JoyJing1/Pixpy/blob/master/src/albums/models.py\
+\
+https://docs.google.com/presentation/u/0/\
+\
+https://drive.google.com/drive/u/0/folders/0B3noREts_wUyfnA5Ry03OS1jOHhlX2hfVzlVVkNUZ29KWl9mN1pYNnZjdkpOUDB5eGxkR1k\
+\
+\
+https://github.com/iheanyi/django-react-redux-users-tutorial/blob/master/accounts/serializers.py\
+\
+https://github.com/iheanyi/django-react-redux-users-tutorial/tree/master/accounts\
+\
+\
+http://iheanyi.com/journal/user-registration-authentication-with-django-django-rest-framework-react-and-redux/\
+\
+https://docs.djangoproject.com/en/dev/topics/db/models/\
+\
+\
+https://docs.djangoproject.com/en/1.10/intro/tutorial02/\
+\
+\
+https://docs.djangoproject.com/en/1.10/topics/db/queries/\
+\
+https://gist.github.com/Belgabor/130e7770575e74581b67597fcb61717e
+\fs24 \cf0 \cb1 \kerning1\expnd0\expndtw0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 \
+\
+remigration\
+\
+https://simpleisbetterthancomplex.com/tutorial/2016/07/26/how-to-reset-migrations.html\
+\
+\
+urls\
+\
+https://docs.djangoproject.com/en/1.10/topics/http/urls/\
+\
+serializers \
+\
+http://www.django-rest-framework.org/api-guide/serializers/\
+\
+\
+fixtures django \
+https://code.djangoproject.com/wiki/Fixtures\
+\
+generic and mixing views\
+http://www.django-rest-framework.org/api-guide/generic-views/\
+\
+login\
+\
+http://www.tangowithdjango.com/book/chapters/login.html\
+\
+support@heroku.com\
+\
+\
+\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f1\fs22 \cf2 \cb3 \CocoaLigature0 Last login: Mon Nov 13 18:25:59 on ttys000\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf10 \cb3 ~/Documents/flex_project_new/AudioCloud/backend
+\f2\b \cf11  (master)
+\f1\b0 \cf10 $\cf2 \cb3  heroku login\
+WARNING: This is the legacy Heroku CLI with limited functionality. Please install the latest CLI.\
+WARNING: On MacOS this can be done with 'brew install heroku' or with the MacOS package from https://cli.heroku.com\
+Enter your Heroku credentials:\
+\cf12 \cb3 Email: \cf2 \cb3 ujwala_aaduru@yahoo.com\
+\cf12 \cb3 Password: \cf2 \cb3 *********\
+Logged in as ujwala_aaduru@yahoo.com\
+\cf10 \cb3 ~/Documents/flex_project_new/AudioCloud/backend
+\f2\b \cf11  (master)
+\f1\b0 \cf10 $\cf2 \cb3  heroku create audiocloud\
+WARNING: This is the legacy Heroku CLI with limited functionality. Please install the latest CLI.\
+WARNING: On MacOS this can be done with 'brew install heroku' or with the MacOS package from https://cli.heroku.com\
+Creating 
+\f3 \cf13 \cb3 \uc0\u11042 
+\f1  audiocloud\cf2 \cb3 ... done\
+\cf14 \cb3 https://audiocloud.herokuapp.com/\cf2 \cb3  | \cf15 \cb3 https://git.heroku.com/audiocloud.git\cf2 \cb3 \
+\cf10 \cb3 ~/Documents/flex_project_new/AudioCloud/backend
+\f2\b \cf11  (master)
+\f1\b0 \cf10 $\cf2 \cb3  git remote\
+heroku\
+origin\
+\cf10 \cb3 ~/Documents/flex_project_new/AudioCloud/backend
+\f2\b \cf11  (master)
+\f1\b0 \cf10 $\cf2 \cb3  git remote remove origin\
+\cf10 \cb3 ~/Documents/flex_project_new/AudioCloud/backend
+\f2\b \cf11  (master)
+\f1\b0 \cf10 $\cf2 \cb3  git remote add heroku https://git.heroku.com/audiocloud.git\
+fatal: remote heroku already exists.\
+\cf10 \cb3 ~/Documents/flex_project_new/AudioCloud/backend
+\f2\b \cf11  (master)
+\f1\b0 \cf10 $\cf2 \cb3  \
+\cf10 \cb3 ~/Documents/flex_project_new/AudioCloud/backend
+\f2\b \cf11  (master)
+\f1\b0 \cf10 $\cf2 \cb3  git remote\
+heroku\
+\cf10 \cb3 ~/Documents/flex_project_new/AudioCloud/backend
+\f2\b \cf11  (master)
+\f1\b0 \cf10 $\cf2 \cb3  git remote remove heroku\
+\cf10 \cb3 ~/Documents/flex_project_new/AudioCloud/backend
+\f2\b \cf11  (master)
+\f1\b0 \cf10 $\cf2 \cb3  git remote\
+\cf10 \cb3 ~/Documents/flex_project_new/AudioCloud/backend
+\f2\b \cf11  (master)
+\f1\b0 \cf10 $\cf2 \cb3  git remote add origin https://github.com/aaduru/Audio_cloud\
+\cf10 \cb3 ~/Documents/flex_project_new/AudioCloud/backend
+\f2\b \cf11  (master)
+\f1\b0 \cf10 $\cf2 \cb3  git remote add heroku https://git.heroku.com/audiocloud.git\
+\cf10 \cb3 ~/Documents/flex_project_new/AudioCloud/backend
+\f2\b \cf11  (master)
+\f1\b0 \cf10 $\cf2 \cb3  \
+\cf10 \cb3 ~/Documents/flex_project_new/AudioCloud/backend
+\f2\b \cf11  (master)
+\f1\b0 \cf10 $\cf2 \cb3  git remote\
+heroku\
+origin\
+\cf10 \cb3 ~/Documents/flex_project_new/AudioCloud/backend
+\f2\b \cf11  (master)
+\f1\b0 \cf10 $\cf2 \cb3  git add -A\
+\cf10 \cb3 ~/Documents/flex_project_new/AudioCloud/backend
+\f2\b \cf11  (master)
+\f1\b0 \cf10 $\cf2 \cb3  git commit -m "deploy testing"\
+[master 58c6275] deploy testing\
+ 1 file changed, 1 insertion(+), 1 deletion(-)\
+\cf10 \cb3 ~/Documents/flex_project_new/AudioCloud/backend
+\f2\b \cf11  (master)
+\f1\b0 \cf10 $\cf2 \cb3  git push origin master\
+giCounting objects: 31, done.\
+Delta compression using up to 4 threads.\
+Compressing objects: 100% (27/27), done.\
+Writing objects: 100% (31/31), 3.88 KiB | 0 bytes/s, done.\
+Total 31 (delta 6), reused 0 (delta 0)\
+remote: Resolving deltas: 100% (6/6), done.\
+push heroku masterTo https://github.com/aaduru/Audio_cloud\
+   a45580f..58c6275  master -> master\
+\cf10 \cb3 ~/Documents/flex_project_new/AudioCloud/backend
+\f2\b \cf11  (master)
+\f1\b0 \cf10 $\cf2 \cb3  git push heroku master\
+Counting objects: 150, done.\
+Delta compression using up to 4 threads.\
+Compressing objects: 100% (139/139), done.\
+Writing objects: 100% (150/150), 3.65 MiB | 334.00 KiB/s, done.\
+Total 150 (delta 13), reused 0 (delta 0)\
+remote: Compressing source files... done.\
+remote: Building source:\
+remote: \
+remote:  !     No default language could be detected for this app.\
+remote: 			HINT: This occurs when Heroku cannot detect the buildpack to use for this application automatically.\
+remote: 			See https://devcenter.heroku.com/articles/buildpacks\
+remote: \
+remote:  !     Push failed\
+remote: Verifying deploy...\
+remote: \
+remote: !	Push rejected to audiocloud.\
+remote: \
+To https://git.heroku.com/audiocloud.git\
+ ! [remote rejected] master -> master (pre-receive hook declined)\
+error: failed to push some refs to 'https://git.heroku.com/audiocloud.git'\
+\cf10 \cb3 ~/Documents/flex_project_new/AudioCloud/backend
+\f2\b \cf11  (master)
+\f1\b0 \cf10 $\cf2 \cb3  git add -A\
+fatal: Not a git repository (or any of the parent directories): .git\
+\cf10 \cb3 ~/Documents/flex_project_new/AudioCloud/backend$\cf2 \cb3  cd ..\
+\cf10 \cb3 ~/Desktop/AudioCloud$\cf2 \cb3  \
+\cf10 \cb3 ~/Desktop/AudioCloud$\cf2 \cb3  cd ../..\
+\cf10 \cb3 ~$\cf2 \cb3  cd Documents/\
+\cf10 \cb3 ~/Documents$\cf2 \cb3  cd flex_project_new/\
+\cf10 \cb3 ~/Documents/flex_project_new
+\f2\b \cf11  (master)
+\f1\b0 \cf10 $\cf2 \cb3  git add -A\
+\cf10 \cb3 ~/Documents/flex_project_new
+\f2\b \cf11  (master)
+\f1\b0 \cf10 $\cf2 \cb3  git commit -m "removed the mail file"\
+[master f55eaa2] removed the mail file\
+ 125 files changed, 57 deletions(-)\
+ delete mode 100755 AudioCloud/.gitignore\
+ rename AudioCloud/Procfile => Procfile (100%)\
+ rename \{AudioCloud/backend => backend\}/AudioCloud/__init__.py (100%)\
+ create mode 100644 backend/AudioCloud/__init__.pyc\
+ rename \{AudioCloud/backend => backend\}/AudioCloud/settings.py (100%)\
+ create mode 100644 backend/AudioCloud/settings.pyc\
+ rename \{AudioCloud/backend => backend\}/AudioCloud/static/index.html (100%)\
+ rename \{AudioCloud/backend => backend\}/AudioCloud/static/javascripts/bundle.js (100%)\
+ rename \{AudioCloud/backend => backend\}/AudioCloud/static/javascripts/bundle.js.map (100%)\
+ rename \{AudioCloud/backend => backend\}/AudioCloud/static/stylesheets/login.css (100%)\
+ rename \{AudioCloud/backend => backend\}/AudioCloud/static/stylesheets/main.css (100%)\
+ rename \{AudioCloud/backend => backend\}/AudioCloud/static/stylesheets/nav.css (100%)\
+ rename \{AudioCloud/backend => backend\}/AudioCloud/static/stylesheets/search.css (100%)\
+ rename \{AudioCloud/backend => backend\}/AudioCloud/static/stylesheets/track_create.css (100%)\
+ rename \{AudioCloud/backend => backend\}/AudioCloud/static/stylesheets/track_index.css (100%)\
+ rename \{AudioCloud/backend => backend\}/AudioCloud/static/stylesheets/track_show.css (100%)\
+ rename \{AudioCloud/backend => backend\}/AudioCloud/urls.py (100%)\
+ create mode 100644 backend/AudioCloud/urls.pyc\
+ rename \{AudioCloud/backend => backend\}/AudioCloud/wsgi.py (100%)\
+ create mode 100644 backend/AudioCloud/wsgi.pyc\
+ rename \{AudioCloud/backend => backend\}/audio/__init__.py (100%)\
+ create mode 100644 backend/audio/__init__.pyc\
+ rename \{AudioCloud/backend => backend\}/audio/admin.py (100%)\
+ create mode 100644 backend/audio/admin.pyc\
+ rename \{AudioCloud/backend => backend\}/audio/apps.py (100%)\
+ create mode 100755 backend/audio/apps.pyc\
+ rename \{AudioCloud/backend => backend\}/audio/fixtures/tracks.json (100%)\
+ rename \{AudioCloud/backend => backend\}/audio/migrations/0001_initial.py (100%)\
+ create mode 100644 backend/audio/migrations/0001_initial.pyc\
+ rename \{AudioCloud/backend => backend\}/audio/migrations/0002_track_user_id.py (100%)\
+ create mode 100644 backend/audio/migrations/0002_track_user_id.pyc\
+ rename \{AudioCloud/backend => backend\}/audio/migrations/__init__.py (100%)\
+ create mode 100644 backend/audio/migrations/__init__.pyc\
+ rename \{AudioCloud/backend => backend\}/audio/models.py (100%)\
+ create mode 100644 backend/audio/models.pyc\
+ rename \{AudioCloud/backend => backend\}/audio/serializers.py (100%)\
+ create mode 100644 backend/audio/serializers.pyc\
+ rename \{AudioCloud/backend => backend\}/audio/tests.py (100%)\
+ rename \{AudioCloud/backend => backend\}/audio/urls.py (100%)\
+ create mode 100644 backend/audio/urls.pyc\
+ rename \{AudioCloud/backend => backend\}/audio/views.py (100%)\
+ create mode 100644 backend/audio/views.pyc\
+ rename \{AudioCloud/backend => backend\}/base/__init__.py (100%)\
+ rename \{AudioCloud/backend => backend\}/base/urls.py (100%)\
+ rename \{AudioCloud/backend => backend\}/base/views.py (100%)\
+ rename \{AudioCloud/backend => backend\}/frontend/actions/errors_actions.js (100%)\
+ rename \{AudioCloud/backend => backend\}/frontend/actions/search_actions.js (100%)\
+ rename \{AudioCloud/backend => backend\}/frontend/actions/session_actions.js (100%)\
+ rename \{AudioCloud/backend => backend\}/frontend/actions/tracks_actions.js (100%)\
+ rename \{AudioCloud/backend => backend\}/frontend/audio_cloud.jsx (100%)\
+ rename \{AudioCloud/backend => backend\}/frontend/components/app.jsx (100%)\
+ rename \{AudioCloud/backend => backend\}/frontend/components/auth.js (100%)\
+ rename \{AudioCloud/backend => backend\}/frontend/components/greeting/greetings.jsx (100%)\
+ rename \{AudioCloud/backend => backend\}/frontend/components/login.jsx (100%)\
+ rename \{AudioCloud/backend => backend\}/frontend/components/root.jsx (100%)\
+ rename \{AudioCloud/backend => backend\}/frontend/components/search/search.jsx (100%)\
+ rename \{AudioCloud/backend => backend\}/frontend/components/search/search_container.js (100%)\
+ rename \{AudioCloud/backend => backend\}/frontend/components/tracks/cloudinary_access.js (100%)\
+ rename \{AudioCloud/backend => backend\}/frontend/components/tracks/track_create.jsx (100%)\
+ rename \{AudioCloud/backend => backend\}/frontend/components/tracks/track_create_container.js (100%)\
+ rename \{AudioCloud/backend => backend\}/frontend/components/tracks/track_detail.jsx (100%)\
+ rename \{AudioCloud/backend => backend\}/frontend/components/tracks/track_detail_container.js (100%)\
+ rename \{AudioCloud/backend => backend\}/frontend/components/tracks/tracks_index.jsx (100%)\
+ rename \{AudioCloud/backend => backend\}/frontend/components/tracks/tracks_index_container.js (100%)\
+ rename \{AudioCloud/backend => backend\}/frontend/components/tracks/tracks_index_item.jsx (100%)\
+ rename \{AudioCloud/backend => backend\}/frontend/reducers/errors_reducer.js (100%)\
+ rename \{AudioCloud/backend => backend\}/frontend/reducers/root_reducer.js (100%)\
+ rename \{AudioCloud/backend => backend\}/frontend/reducers/search_reducer.js (100%)\
+ rename \{AudioCloud/backend => backend\}/frontend/reducers/selectors.js (100%)\
+ rename \{AudioCloud/backend => backend\}/frontend/reducers/session_reducer.js (100%)\
+ rename \{AudioCloud/backend => backend\}/frontend/reducers/track_detail_reducer.js (100%)\
+ rename \{AudioCloud/backend => backend\}/frontend/reducers/tracks_reducer.js (100%)\
+ rename \{AudioCloud/backend => backend\}/frontend/store/store.js (100%)\
+ rename \{AudioCloud/backend => backend\}/frontend/util/search_api_util.js (100%)\
+ rename \{AudioCloud/backend => backend\}/frontend/util/session_api_util.js (100%)\
+ rename \{AudioCloud/backend => backend\}/frontend/util/tracks_api_util.js (100%)\
+ rename \{AudioCloud/backend => backend\}/lib/__init__.py (100%)\
+ rename \{AudioCloud/backend => backend\}/lib/utils.py (100%)\
+ rename \{AudioCloud/backend => backend\}/manage.py (100%)\
+ rename \{AudioCloud/backend => backend\}/useraccounts/__init__.py (100%)\
+ create mode 100644 backend/useraccounts/__init__.pyc\
+ rename \{AudioCloud/backend => backend\}/useraccounts/admin.py (100%)\
+ create mode 100644 backend/useraccounts/admin.pyc\
+ rename \{AudioCloud/backend => backend\}/useraccounts/apps.py (100%)\
+ create mode 100644 backend/useraccounts/apps.pyc\
+ rename \{AudioCloud/backend => backend\}/useraccounts/migrations/0001_initial.py (100%)\
+ create mode 100644 backend/useraccounts/migrations/0001_initial.pyc\
+ rename \{AudioCloud/backend => backend\}/useraccounts/migrations/0002_auto_20170206_0842.py (100%)\
+ create mode 100644 backend/useraccounts/migrations/0002_auto_20170206_0842.pyc\
+ rename \{AudioCloud/backend => backend\}/useraccounts/migrations/__init__.py (100%)\
+ create mode 100644 backend/useraccounts/migrations/__init__.pyc\
+ rename \{AudioCloud/backend => backend\}/useraccounts/models.py (100%)\
+ create mode 100644 backend/useraccounts/models.pyc\
+ rename \{AudioCloud/backend => backend\}/useraccounts/serializers.py (100%)\
+ create mode 100644 backend/useraccounts/serializers.pyc\
+ rename \{AudioCloud/backend => backend\}/useraccounts/signals.py (100%)\
+ create mode 100644 backend/useraccounts/signals.pyc\
+ rename \{AudioCloud/backend => backend\}/useraccounts/tests.py (100%)\
+ rename \{AudioCloud/backend => backend\}/useraccounts/urls.py (100%)\
+ create mode 100644 backend/useraccounts/urls.pyc\
+ rename \{AudioCloud/backend => backend\}/useraccounts/views.py (100%)\
+ create mode 100644 backend/useraccounts/views.pyc\
+ rename \{AudioCloud/backend => backend\}/webpack-stats.json (100%)\
+ rename \{AudioCloud/docs => docs\}/README.md (100%)\
+ rename \{AudioCloud/docs => docs\}/api-endpoints.md (100%)\
+ rename \{AudioCloud/docs => docs\}/component-hierarchy.md (100%)\
+ rename \{AudioCloud/docs => docs\}/sample-state.md (100%)\
+ rename \{AudioCloud/docs => docs\}/schema.md (100%)\
+ rename \{AudioCloud/docs => docs\}/wireframes/Log in.png (100%)\
+ rename \{AudioCloud/docs => docs\}/wireframes/_homepage.png (100%)\
+ rename \{AudioCloud/docs => docs\}/wireframes/_showpage.png (100%)\
+ rename \{AudioCloud/docs => docs\}/wireframes/_track_create_page.png (100%)\
+ rename \{AudioCloud/docs => docs\}/wireframes/homepage.png (100%)\
+ rename \{AudioCloud/docs => docs\}/wireframes/showpage.png (100%)\
+ rename \{AudioCloud/docs => docs\}/wireframes/sign up.png (100%)\
+ rename AudioCloud/package.json => package.json (100%)\
+ rename AudioCloud/README.md => readme.md (100%)\
+ rename AudioCloud/requirements.txt => requirements.txt (100%)\
+ rename \{AudioCloud/requirements => requirements\}/base.txt (100%)\
+ rename \{AudioCloud/requirements => requirements\}/local.txt (100%)\
+ rename \{AudioCloud/requirements => requirements\}/production.txt (100%)\
+ rename \{AudioCloud/requirements => requirements\}/testing.txt (100%)\
+ rename AudioCloud/runtime.txt => runtime.txt (100%)\
+ rename AudioCloud/webpack-stats.json => webpack-stats.json (100%)\
+ rename AudioCloud/webpack.config.js => webpack.config.js (100%)\
+\cf10 \cb3 ~/Documents/flex_project_new
+\f2\b \cf11  (master)
+\f1\b0 \cf10 $\cf2 \cb3  git push origin master\
+Counting objects: 33, done.\
+Delta compression using up to 4 threads.\
+Compressing objects: 100% (33/33), done.\
+Writing objects: 100% (33/33), 15.01 KiB | 0 bytes/s, done.\
+Total 33 (delta 5), reused 0 (delta 0)\
+remote: Resolving deltas: 100% (5/5), done.\
+To https://github.com/aaduru/Audio_cloud\
+   58c6275..f55eaa2  master -> master\
+\cf10 \cb3 ~/Documents/flex_project_new
+\f2\b \cf11  (master)
+\f1\b0 \cf10 $\cf2 \cb3  git push heroku master\
+Counting objects: 183, done.\
+Delta compression using up to 4 threads.\
+Compressing objects: 100% (172/172), done.\
+Writing objects: 100% (183/183), 3.66 MiB | 316.00 KiB/s, done.\
+Total 183 (delta 24), reused 0 (delta 0)\
+remote: Compressing source files... done.\
+remote: Building source:\
+remote: \
+remote:  !     Warning: Multiple default buildpacks reported the ability to handle this app. The first buildpack in the list below will be used.\
+remote: 			Detected buildpacks: Python,Node.js\
+remote: 			See https://devcenter.heroku.com/articles/buildpacks#buildpack-detect-order\
+remote: -----> Python app detected\
+remote: -----> Installing python-2.7.14\
+remote: -----> Installing pip\
+remote: -----> Installing requirements with pip\
+remote:        Collecting dj-database-url==0.4.2 (from -r /tmp/build_43096cfd6fba81f52ef3a3414e1c9616/requirements.txt (line 1))\
+remote:          Downloading dj_database_url-0.4.2-py2.py3-none-any.whl\
+remote:        Collecting Django==1.11.7 (from -r /tmp/build_43096cfd6fba81f52ef3a3414e1c9616/requirements.txt (line 2))\
+remote:          Downloading Django-1.11.7-py2.py3-none-any.whl (6.9MB)\
+remote:        Collecting django-extensions==1.7.6 (from -r /tmp/build_43096cfd6fba81f52ef3a3414e1c9616/requirements.txt (line 3))\
+remote:          Downloading django_extensions-1.7.6-py2.py3-none-any.whl (202kB\
+remote:        Collecting django-seed==0.1.7 (from -r /tmp/build_43096cfd6fba81f52ef3a3414e1c9616/requirements.txt (line 4))\
+remote:          Downloading django-seed-0.1.7.tar.gz\
+remote:        Collecting django-webpack-loader==0.5.0 (from -r /tmp/build_43096cfd6fba81f52ef3a3414e1c9616/requirements.txt (line 5))\
+remote:          Downloading django_webpack_loader-0.5.0-py2.py3-none-any.whl\
+remote:        Collecting djangorestframework==3.7.3 (from -r /tmp/build_43096cfd6fba81f52ef3a3414e1c9616/requirements.txt (line 6))\
+remote:          Downloading djangorestframework-3.7.3-py2.py3-none-any.whl (1.5MB)\
+remote:        Collecting Faker==0.7.7 (from -r /tmp/build_43096cfd6fba81f52ef3a3414e1c9616/requirements.txt (line 7))\
+remote:          Downloading Faker-0.7.7-py2.py3-none-any.whl (562kB)\
+remote:        Collecting ipaddress==1.0.18 (from -r /tmp/build_43096cfd6fba81f52ef3a3414e1c9616/requirements.txt (line 8))\
+remote:          Downloading ipaddress-1.0.18-py2-none-any.whl\
+remote:        Collecting psycopg2==2.7.3.2 (from -r /tmp/build_43096cfd6fba81f52ef3a3414e1c9616/requirements.txt (line 9))\
+remote:          Downloading psycopg2-2.7.3.2-cp27-cp27mu-manylinux1_x86_64.whl (2.7MB)\
+remote:        Collecting pytz==2017.3 (from -r /tmp/build_43096cfd6fba81f52ef3a3414e1c9616/requirements.txt (line 10))\
+remote:          Downloading pytz-2017.3-py2.py3-none-any.whl (511kB)\
+remote:        Collecting bcrypt==3.1.2 (from -r /tmp/build_43096cfd6fba81f52ef3a3414e1c9616/requirements.txt (line 11))\
+remote:          Downloading bcrypt-3.1.2-cp27-cp27mu-manylinux1_x86_64.whl (56kB)\
+remote:        Collecting whitenoise==3.3.1 (from -r /tmp/build_43096cfd6fba81f52ef3a3414e1c9616/requirements.txt (line 12))\
+remote:          Downloading whitenoise-3.3.1-py2.py3-none-any.whl\
+remote:        Collecting PyJWT==1.4.2 (from -r /tmp/build_43096cfd6fba81f52ef3a3414e1c9616/requirements.txt (line 13))\
+remote:          Downloading PyJWT-1.4.2-py2.py3-none-any.whl\
+remote:        Collecting gunicorn==19.6.0 (from -r /tmp/build_43096cfd6fba81f52ef3a3414e1c9616/requirements.txt (line 14))\
+remote:          Downloading gunicorn-19.6.0-py2.py3-none-any.whl (114kB)\
+remote:        Collecting python-dateutil==2.6.0 (from -r /tmp/build_43096cfd6fba81f52ef3a3414e1c9616/requirements.txt (line 15))\
+remote:          Downloading python_dateutil-2.6.0-py2.py3-none-any.whl (194kB)\
+remote:        Collecting six>=1.2 (from django-extensions==1.7.6->-r /tmp/build_43096cfd6fba81f52ef3a3414e1c9616/requirements.txt (line 3))\
+remote:          Downloading six-1.11.0-py2.py3-none-any.whl\
+remote:        Collecting cffi>=1.1 (from bcrypt==3.1.2->-r /tmp/build_43096cfd6fba81f52ef3a3414e1c9616/requirements.txt (line 11))\
+remote:          Downloading cffi-1.11.2-cp27-cp27mu-manylinux1_x86_64.whl (405kB)\
+remote:        Collecting pycparser (from cffi>=1.1->bcrypt==3.1.2->-r /tmp/build_43096cfd6fba81f52ef3a3414e1c9616/requirements.txt (line 11))\
+remote:          Downloading pycparser-2.18.tar.gz (245kB)\
+remote:        Installing collected packages: dj-database-url, pytz, Django, six, django-extensions, python-dateutil, ipaddress, Faker, django-seed, django-webpack-loader, djangorestframework, psycopg2, pycparser, cffi, bcrypt, whitenoise, PyJWT, gunicorn\
+remote:          Running setup.py install for django-seed: started\
+remote:            Running setup.py install for django-seed: finished with status 'done'\
+remote:          Running setup.py install for pycparser: started\
+remote:            Running setup.py install for pycparser: finished with status 'done'\
+remote:        Successfully installed Django-1.11.7 Faker-0.7.7 PyJWT-1.4.2 bcrypt-3.1.2 cffi-1.11.2 dj-database-url-0.4.2 django-extensions-1.7.6 django-seed-0.1.7 django-webpack-loader-0.5.0 djangorestframework-3.7.3 gunicorn-19.6.0 ipaddress-1.0.18 psycopg2-2.7.3.2 pycparser-2.18 python-dateutil-2.6.0 pytz-2017.3 six-1.11.0 whitenoise-3.3.1\
+remote: \
+remote: -----> $ python backend/manage.py collectstatic --noinput\
+remote:        117 static files copied to '/tmp/build_43096cfd6fba81f52ef3a3414e1c9616/backend/staticfiles', 169 post-processed.\
+remote: \
+remote: -----> Discovering process types\
+remote:        Procfile declares types -> web\
+remote: \
+remote: -----> Compressing...\
+remote:        Done: 52.1M\
+remote: -----> Launching...\
+remote:        Released v4\
+remote:        https://audiocloud.herokuapp.com/ deployed to Heroku\
+remote: \
+remote: Verifying deploy... done.\
+To https://git.heroku.com/audiocloud.git\
+ * [new branch]      master -> master\
+\cf10 \cb3 ~/Documents/flex_project_new
+\f2\b \cf11  (master)
+\f1\b0 \cf10 $\cf2 \cb3  git add -A\
+\cf10 \cb3 ~/Documents/flex_project_new
+\f2\b \cf11  (master)
+\f1\b0 \cf10 $\cf2 \cb3  git commit -m "test deploy"\
+[master 33d7fc8] test deploy\
+ 1 file changed, 2 deletions(-)\
+\cf10 \cb3 ~/Documents/flex_project_new
+\f2\b \cf11  (master)
+\f1\b0 \cf10 $\cf2 \cb3  git push origin master\
+Counting objects: 3, done.\
+Delta compression using up to 4 threads.\
+Compressing objects: 100% (3/3), done.\
+Writing objects: 100% (3/3), 293 bytes | 0 bytes/s, done.\
+Total 3 (delta 2), reused 0 (delta 0)\
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.\
+To https://github.com/aaduru/Audio_cloud\
+   f55eaa2..33d7fc8  master -> master\
+\cf10 \cb3 ~/Documents/flex_project_new
+\f2\b \cf11  (master)
+\f1\b0 \cf10 $\cf2 \cb3  git push heroku master\
+Counting objects: 3, done.\
+Delta compression using up to 4 threads.\
+Compressing objects: 100% (3/3), done.\
+Writing objects: 100% (3/3), 293 bytes | 0 bytes/s, done.\
+Total 3 (delta 2), reused 0 (delta 0)\
+remote: Compressing source files... done.\
+remote: Building source:\
+remote: \
+remote: -----> Node.js app detected\
+remote: \
+remote: -----> Creating runtime environment\
+remote:        \
+remote:        NPM_CONFIG_LOGLEVEL=erro\
+remote:        NPM_CONFIG_PRODUCTION=true\
+remote:        NODE_VERBOSE=false\
+remote:        NODE_ENV=production\
+remote:        NODE_MODULES_CACHE=true\
+remote: \
+remote: -----> Installing binaries\
+remote:        engines.node (package.json):  unspecified\
+remote:        engines.npm (package.json):   unspecified (use default)\
+remote:        \
+remote:        Resolving node version 8.x...\
+remote:        Downloading and installing node 8.9.1...\
+remote:        Using default npm version: 5.5.1\
+remote: \
+remote: -----> Restoring cache\
+remote:        Skipping cache restore (not-found)\
+remote: \
+remote: -----> Building dependencies\
+remote:        Installing node modules (package.json)\
+remote:        added 490 packages in 15.288s\
+remote: \
+remote: -----> Caching build\
+remote:        Clearing previous node cache\
+remote:        Saving 2 cacheDirectories (default):\
+remote:        - node_modules\
+remote:        - bower_components (nothing to cache)\
+remote: \
+remote: -----> Build succeeded!\
+remote: -----> Python app detected\
+remote: -----> Installing requirements with pip\
+remote: \
+remote: -----> $ python backend/manage.py collectstatic --noinput\
+remote:        117 static files copied to '/tmp/build_db6efa9b9524be5d9db185704c32334a/backend/staticfiles', 169 post-processed.\
+remote: \
+remote: -----> Discovering process type\
+remote:        Procfile declares types -> web\
+remote: \
+remote: -----> Compressing...\
+remote:        Done: 80.2M\
+remote: -----> Launching...\
+remote:        Released v5\
+remote:        https://audiocloud.herokuapp.com/ deployed to Heroku\
+remote: \
+remote: Verifying deploy... done.\
+To https://git.heroku.com/audiocloud.git\
+   f55eaa2..33d7fc8  master -> master\
+\cf10 \cb3 ~/Documents/flex_project_new
+\f2\b \cf11  (master)
+\f1\b0 \cf10 $\cf2 \cb3  heroku run python manage.py loaddata tracks.json\
+WARNING: This is the legacy Heroku CLI with limited functionality. Please install the latest CLI.\
+WARNING: On MacOS this can be done with 'brew install heroku' or with the MacOS package from https://cli.heroku.com\
+Running 
+\f2\b \cf14 \cb3 python manage.py loaddata tracks.json
+\f1\b0 \cf2 \cb3  on 
+\f3 \cf13 \cb3 \uc0\u11042 
+\f1  audiocloud\cf2 \cb3 ... up, run.1022 (Free)\
+python: can't open file 'manage.py': [Errno 2] No such file or directory\
+\cf10 \cb3 ~/Documents/flex_project_new
+\f2\b \cf11  (master)
+\f1\b0 \cf10 $\cf2 \cb3  heroku run python manage.py loaddata fixtures.json\
+WARNING: This is the legacy Heroku CLI with limited functionality. Please install the latest CLI.\
+WARNING: On MacOS this can be done with 'brew install heroku' or with the MacOS package from https://cli.heroku.com\
+Running 
+\f2\b \cf14 \cb3 python manage.py loaddata fixtures.json
+\f1\b0 \cf2 \cb3  on 
+\f3 \cf13 \cb3 \uc0\u11042 
+\f1  audiocloud\cf2 \cb3 ... up, run.7874 (Free)\
+python: can't open file 'manage.py': [Errno 2] No such file or directory\
+\cf10 \cb3 ~/Documents/flex_project_new
+\f2\b \cf11  (master)
+\f1\b0 \cf10 $\cf2 \cb3  cd backend\
+\cf10 \cb3 ~/Documents/flex_project_new/backend
+\f2\b \cf11  (master)
+\f1\b0 \cf10 $\cf2 \cb3  heroku run python manage.py loaddata tracks.json\
+WARNING: This is the legacy Heroku CLI with limited functionality. Please install the latest CLI.\
+WARNING: On MacOS this can be done with 'brew install heroku' or with the MacOS package from https://cli.heroku.com\
+Running 
+\f2\b \cf14 \cb3 python manage.py loaddata tracks.json
+\f1\b0 \cf2 \cb3  on 
+\f3 \cf13 \cb3 \uc0\u11042 
+\f1  audiocloud\cf2 \cb3 ... up, run.8476 (Free)\
+python: can't open file 'manage.py': [Errno 2] No such file or directory\
+\cf10 \cb3 ~/Documents/flex_project_new/backend
+\f2\b \cf11  (master)
+\f1\b0 \cf10 $\cf2 \cb3  heroku run python manage.py loaddata audio/fixtures/tracks.json\
+WARNING: This is the legacy Heroku CLI with limited functionality. Please install the latest CLI.\
+WARNING: On MacOS this can be done with 'brew install heroku' or with the MacOS package from https://cli.heroku.com\
+Running 
+\f2\b \cf14 \cb3 python manage.py loaddata audio/fixtures/tracks.json
+\f1\b0 \cf2 \cb3  on 
+\f3 \cf13 \cb3 \uc0\u11042 
+\f1  audiocloud\cf2 \cb3 ... up, run.4522 (Free)\
+python: can't open file 'manage.py': [Errno 2] No such file or directory\
+\cf10 \cb3 ~/Documents/flex_project_new/backend
+\f2\b \cf11  (master)
+\f1\b0 \cf10 $\cf2 \cb3  ls\
+\cf16 \cb3 AudioCloud\cf2 \cb3          \cf16 \cb3 base\cf2 \cb3                \cf16 \cb3 lib\cf2 \cb3                 \cf16 \cb3 useraccounts\cf2 \cb3 \
+\cf16 \cb3 audio\cf2 \cb3               \cf16 \cb3 frontend\cf2 \cb3            \cf10 \cb3 manage.py\cf2 \cb3           \cf10 \cb3 webpack-stats.json\cf2 \cb3 \
+\cf10 \cb3 ~/Documents/flex_project_new/backend
+\f2\b \cf11  (master)
+\f1\b0 \cf10 $\cf2 \cb3  heroku run python manage.py loaddata audio/fixtures/tracks.json\
+WARNING: This is the legacy Heroku CLI with limited functionality. Please install the latest CLI.\
+WARNING: On MacOS this can be done with 'brew install heroku' or with the MacOS package from https://cli.heroku.com\
+Running 
+\f2\b \cf14 \cb3 python manage.py loaddata audio/fixtures/tracks.json
+\f1\b0 \cf2 \cb3  on 
+\f3 \cf13 \cb3 \uc0\u11042 
+\f1  audiocloud\cf2 \cb3 ... up, run.6232 (Free)\
+\cf10 \cb3 ~/Documents/flex_project_new/backend
+\f2\b \cf11  (master)
+\f1\b0 \cf10 $\cf2 \cb3  heroku addons:create heroku-postgresql:audiocloud\
+WARNING: This is the legacy Heroku CLI with limited functionality. Please install the latest CLI.\
+WARNING: On MacOS this can be done with 'brew install heroku' or with the MacOS package from https://cli.heroku.com\
+Creating heroku-postgresql:audiocloud on 
+\f3 \cf13 \cb3 \uc0\u11042 
+\f1  audiocloud\cf2 \cb3 ... 
+\f2\b \cf10 \cb3 !
+\f1\b0 \cf2 \cb3 \
+ \cf10 \cb3 \uc0\u9656 \cf2 \cb3     Couldn't find either the add-on service or the add-on plan of "heroku-postgresql:audiocloud".\
+\cf10 \cb3 ~/Documents/flex_project_new/backend
+\f2\b \cf11  (master)
+\f1\b0 \cf10 $\cf2 \cb3  heroku local\
+WARNING: This is the legacy Heroku CLI with limited functionality. Please install the latest CLI.\
+WARNING: On MacOS this can be done with 'brew install heroku' or with the MacOS package from https://cli.heroku.com\
+\cf17 \cb3 [WARN] ENOENT: no such file or directory, open 'Procfile'\cf2 \cb3 \
+\cf10 \cb3 [FAIL] No Procfile and no package.json file found in Current Directory - See heroku.js --help\cf2 \cb3 \
+ \cf10 \cb3 \uc0\u9656 \cf2 \cb3     Cannot convert undefined or null to object\
+\cf10 \cb3 ~/Documents/flex_project_new/backend
+\f2\b \cf11  (master)
+\f1\b0 \cf10 $\cf2 \cb3  cd ..\
+\cf10 \cb3 ~/Documents/flex_project_new
+\f2\b \cf11  (master)
+\f1\b0 \cf10 $\cf2 \cb3  heroku local\
+WARNING: This is the legacy Heroku CLI with limited functionality. Please install the latest CLI.\
+WARNING: On MacOS this can be done with 'brew install heroku' or with the MacOS package from https://cli.heroku.com\
+\cf17 \cb3 [WARN] No ENV file found\cf2 \cb3 \
+\cf18 \cb3 18:58:47 web.1   | \cf2 \cb3  [2017-11-13 18:58:47 -0800] [25173] [INFO] Starting gunicorn 19.6.0\
+\cf18 \cb3 18:58:47 web.1   | \cf2 \cb3  [2017-11-13 18:58:47 -0800] [25173] [INFO] Listening at: http://0.0.0.0:5000 (25173)\
+\cf18 \cb3 18:58:47 web.1   | \cf2 \cb3  [2017-11-13 18:58:47 -0800] [25173] [INFO] Using worker: sync\
+\cf18 \cb3 18:58:47 web.1   | \cf2 \cb3  [2017-11-13 18:58:47 -0800] [25176] [INFO] Booting worker with pid: 25176\
+\cf18 \cb3 18:59:00 web.1   | \cf2 \cb3  Invalid HTTP_HOST header: '0.0.0.0:5000'. You may need to add u'0.0.0.0' to ALLOWED_HOSTS.\
+\cf18 \cb3 18:59:00 web.1   | \cf2 \cb3  Invalid HTTP_HOST header: '0.0.0.0:5000'. You may need to add u'0.0.0.0' to ALLOWED_HOSTS.\
+\cf18 \cb3 18:59:18 web.1   | \cf2 \cb3  [2017-11-13 18:59:18 -0800] [25173] [INFO] Handling signal: winch\
+^C\cf17 \cb3 [WARN] Interrupted by User\cf2 \cb3 \
+\cf14 \cb3 [DONE] Killing all processes with signal  SIGINT\cf2 \cb3 \
+\cf18 \cb3 18:59:38 web.1   | \cf2 \cb3  [2017-11-13 18:59:38 -0800] [25173] [INFO] Handling signal: int\
+\cf10 \cb3 ~/Documents/flex_project_new
+\f2\b \cf11  (master)
+\f1\b0 \cf10 $\cf2 \cb3  \cf18 \cb3 18:59:38 web.1   | \cf2 \cb3  [2017-11-14 02:59:38 +0000] [25176] [INFO] Worker exiting (pid: 25176)\
+\cf18 \cb3 18:59:38 web.1   | \cf2 \cb3  [2017-11-13 18:59:38 -0800] [25173] [INFO] Shutting down: Master\
+\cf18 \cb3 18:59:38 web.1  \cf2 \cb3  \cf14 \cb3 Exited Successfully\cf2 \cb3 \
+\
+\cf10 \cb3 ~/Documents/flex_project_new
+\f2\b \cf11  (master)
+\f1\b0 \cf10 $\cf2 \cb3  ls\
+\cf10 \cb3 Procfile\cf2 \cb3            \cf10 \cb3 package.json\cf2 \cb3        \cf10 \cb3 webpack-stats.json\cf2 \cb3 \
+\cf10 \cb3 README.md\cf2 \cb3           \cf16 \cb3 requirements\cf2 \cb3        \cf10 \cb3 webpack.config.js\cf2 \cb3 \
+\cf16 \cb3 backend\cf2 \cb3             \cf10 \cb3 requirements.txt\cf2 \cb3 \
+\cf16 \cb3 docs\cf2 \cb3                runtime.txt\
+\cf10 \cb3 ~/Documents/flex_project_new
+\f2\b \cf11  (master)
+\f1\b0 \cf10 $\cf2 \cb3  python backend/manage.py loaddata backend/audio/fixtures/tracks.json \
+System check identified some issues:\
+\
+WARNINGS:\
+
+\f2\b \cf17 \cb3 ?: (urls.W002) Your URL pattern '^/api/obtain-auth-token' has a regex beginning with a '/'. Remove this slash as it is unnecessary. If this pattern is targeted in an include(), ensure the include() pattern has a trailing '/'.
+\f1\b0 \cf2 \cb3 \
+Installed 10 object(s) from 1 fixture(s)\
+\cf10 \cb3 ~/Documents/flex_project_new
+\f2\b \cf11  (master)
+\f1\b0 \cf10 $\cf2 \cb3  python backend/manage.py loaddata backend/audio/fixtures/tracks.json \
+Installed 10 object(s) from 1 fixture(s)\
+\cf10 \cb3 ~/Documents/flex_project_new
+\f2\b \cf11  (master)
+\f1\b0 \cf10 $\cf2 \cb3  git add -A\
+\cf10 \cb3 ~/Documents/flex_project_new
+\f2\b \cf11  (master)
+\f1\b0 \cf10 $\cf2 \cb3  git commit -m "update urls.py and add heroku local domain to setting.py"\
+[master ebc7571] update urls.py and add heroku local domain to setting.py\
+ 4 files changed, 3 insertions(+), 2 deletions(-)\
+ rewrite backend/AudioCloud/urls.pyc (66%)\
+\cf10 \cb3 ~/Documents/flex_project_new
+\f2\b \cf11  (master)
+\f1\b0 \cf10 $\cf2 \cb3  git push origin master;git push heroku master\
+Counting objects: 8, done.\
+Delta compression using up to 4 threads.\
+Compressing objects: 100% (8/8), done.\
+Writing objects: 100% (8/8), 1.15 KiB | 0 bytes/s, done.\
+Total 8 (delta 6), reused 0 (delta 0)\
+remote: Resolving deltas: 100% (6/6), completed with 6 local objects.\
+To https://github.com/aaduru/Audio_cloud\
+   33d7fc8..ebc7571  master -> master\
+Counting objects: 8, done.\
+Delta compression using up to 4 threads.\
+Compressing objects: 100% (8/8), done.\
+Writing objects: 100% (8/8), 1.15 KiB | 0 bytes/s, done.\
+Total 8 (delta 6), reused 0 (delta 0)\
+remote: Compressing source files... done.\
+remote: Building source:\
+remote: \
+remote: -----> Node.js app detected\
+remote: \
+remote: -----> Creating runtime environment\
+remote:        \
+remote:        NPM_CONFIG_LOGLEVEL=error\
+remote:        NPM_CONFIG_PRODUCTION=true\
+remote:        NODE_VERBOSE=false\
+remote:        NODE_ENV=production\
+remote:        NODE_MODULES_CACHE=true\
+remote: \
+remote: -----> Installing binaries\
+remote:        engines.node (package.json):  unspecified\
+remote:        engines.npm (package.json):   unspecified (use default)\
+remote:        \
+remote:        Resolving node version 8.x...\
+remote:        Downloading and installing node 8.9.1...\
+remote:        Using default npm version: 5.5.1\
+remote: \
+remote: -----> Restoring cache\
+remote:        Loading 2 from cacheDirectories (default):\
+remote:        - node_modules\
+remote:        - bower_components (not cached - skipping)\
+remote: \
+remote: -----> Building dependencies\
+remote:        Installing node modules (package.json)\
+remote:        added 116 packages in 7.385s\
+remote: \
+remote: -----> Caching build\
+remote:        Clearing previous node cache\
+remote:        Saving 2 cacheDirectories (default):\
+remote:        - node_modules\
+remote:        - bower_components (nothing to cache)\
+remote: \
+remote: -----> Build succeeded!\
+remote: -----> Python app detected\
+remote: -----> Installing requirements with pip\
+remote: \
+remote: -----> $ python backend/manage.py collectstatic --noinput\
+remote:        117 static files copied to '/tmp/build_73e5da1fe8185a910bd0a3f6fd4da1ea/backend/staticfiles', 143 post-processed.\
+remote: \
+remote: -----> Discovering process types\
+remote:        Procfile declares types -> web\
+remote: \
+remote: -----> Compressing...\
+remote:        Done: 80.2M\
+remote: -----> Launching...\
+remote:        Released v6\
+remote:        https://audiocloud.herokuapp.com/ deployed to Heroku\
+remote: \
+remote: Verifying deploy.... done.\
+To https://git.heroku.com/audiocloud.git\
+   33d7fc8..ebc7571  master -> master\
+\cf10 \cb3 ~/Documents/flex_project_new
+\f2\b \cf11  (master)
+\f1\b0 \cf10 $\cf2 \cb3  heroku run backend/manage.py showmigrations\
+WARNING: This is the legacy Heroku CLI with limited functionality. Please install the latest CLI.\
+WARNING: On MacOS this can be done with 'brew install heroku' or with the MacOS package from https://cli.heroku.com\
+Running 
+\f2\b \cf14 \cb3 backend/manage.py showmigrations
+\f1\b0 \cf2 \cb3  on 
+\f3 \cf13 \cb3 \uc0\u11042 
+\f1  audiocloud\cf2 \cb3 ... up, run.3310 (Free)\
+
+\f2\b \cf2 \cb3 admin
+\f1\b0 \cf2 \cb3 \
+ [ ] 0001_initial\
+ [ ] 0002_logentry_remove_auto_add\
+
+\f2\b \cf2 \cb3 audio
+\f1\b0 \cf2 \cb3 \
+ [ ] 0001_initial\
+ [ ] 0002_track_user_id\
+
+\f2\b \cf2 \cb3 auth
+\f1\b0 \cf2 \cb3 \
+ [ ] 0001_initial\
+ [ ] 0002_alter_permission_name_max_length\
+ [ ] 0003_alter_user_email_max_length\
+ [ ] 0004_alter_user_username_opts\
+ [ ] 0005_alter_user_last_login_null\
+ [ ] 0006_require_contenttypes_0002\
+ [ ] 0007_alter_validators_add_error_messages\
+ [ ] 0008_alter_user_username_max_length\
+
+\f2\b \cf2 \cb3 authtoken
+\f1\b0 \cf2 \cb3 \
+ [ ] 0001_initial\
+ [ ] 0002_auto_20160226_1747\
+
+\f2\b \cf2 \cb3 contenttypes
+\f1\b0 \cf2 \cb3 \
+ [ ] 0001_initial\
+ [ ] 0002_remove_content_type_name\
+
+\f2\b \cf2 \cb3 sessions
+\f1\b0 \cf2 \cb3 \
+ [ ] 0001_initial\
+
+\f2\b \cf2 \cb3 useraccounts
+\f1\b0 \cf2 \cb3 \
+ [ ] 0001_initial\
+ [ ] 0002_auto_20170206_0842\
+\cf10 \cb3 ~/Documents/flex_project_new
+\f2\b \cf11  (master)
+\f1\b0 \cf10 $\cf2 \cb3  heroku run backend/manage.py makemigrations\
+WARNING: This is the legacy Heroku CLI with limited functionality. Please install the latest CLI.\
+WARNING: On MacOS this can be done with 'brew install heroku' or with the MacOS package from https://cli.heroku.com\
+Running 
+\f2\b \cf14 \cb3 backend/manage.py makemigrations
+\f1\b0 \cf2 \cb3  on 
+\f3 \cf13 \cb3 \uc0\u11042 
+\f1  audiocloud\cf2 \cb3 ... up, run.2677 (Free)\
+No changes detected\
+\cf10 \cb3 ~/Documents/flex_project_new
+\f2\b \cf11  (master)
+\f1\b0 \cf10 $\cf2 \cb3  heroku run backend/manage.py migrate\
+WARNING: This is the legacy Heroku CLI with limited functionality. Please install the latest CLI.\
+WARNING: On MacOS this can be done with 'brew install heroku' or with the MacOS package from https://cli.heroku.com\
+Running 
+\f2\b \cf14 \cb3 backend/manage.py migrate
+\f1\b0 \cf2 \cb3  on 
+\f3 \cf13 \cb3 \uc0\u11042 
+\f1  audiocloud\cf2 \cb3 ... up, run.3856 (Free)\
+
+\f2\b \cf14 \cb3 Operations to perform:
+\f1\b0 \cf2 \cb3 \
+
+\f2\b \cf2 \cb3   Apply all migrations: 
+\f1\b0 \cf2 \cb3 admin, audio, auth, authtoken, contenttypes, sessions, useraccounts\
+
+\f2\b \cf14 \cb3 Running migrations:
+\f1\b0 \cf2 \cb3 \
+  Applying contenttypes.0001_initial...
+\f2\b \cf15 \cb3  OK
+\f1\b0 \cf2 \cb3 \
+  Applying auth.0001_initial...
+\f2\b \cf15 \cb3  OK
+\f1\b0 \cf2 \cb3 \
+  Applying admin.0001_initial...
+\f2\b \cf15 \cb3  OK
+\f1\b0 \cf2 \cb3 \
+  Applying admin.0002_logentry_remove_auto_add...
+\f2\b \cf15 \cb3  OK
+\f1\b0 \cf2 \cb3 \
+  Applying audio.0001_initial...
+\f2\b \cf15 \cb3  OK
+\f1\b0 \cf2 \cb3 \
+  Applying audio.0002_track_user_id...
+\f2\b \cf15 \cb3  OK
+\f1\b0 \cf2 \cb3 \
+  Applying contenttypes.0002_remove_content_type_name...
+\f2\b \cf15 \cb3  OK
+\f1\b0 \cf2 \cb3 \
+  Applying auth.0002_alter_permission_name_max_length...
+\f2\b \cf15 \cb3  OK
+\f1\b0 \cf2 \cb3 \
+  Applying auth.0003_alter_user_email_max_length...
+\f2\b \cf15 \cb3  OK
+\f1\b0 \cf2 \cb3 \
+  Applying auth.0004_alter_user_username_opts...
+\f2\b \cf15 \cb3  OK
+\f1\b0 \cf2 \cb3 \
+  Applying auth.0005_alter_user_last_login_null...
+\f2\b \cf15 \cb3  OK
+\f1\b0 \cf2 \cb3 \
+  Applying auth.0006_require_contenttypes_0002...
+\f2\b \cf15 \cb3  OK
+\f1\b0 \cf2 \cb3 \
+  Applying auth.0007_alter_validators_add_error_messages...
+\f2\b \cf15 \cb3  OK
+\f1\b0 \cf2 \cb3 \
+  Applying auth.0008_alter_user_username_max_length...
+\f2\b \cf15 \cb3  OK
+\f1\b0 \cf2 \cb3 \
+  Applying authtoken.0001_initial...
+\f2\b \cf15 \cb3  OK
+\f1\b0 \cf2 \cb3 \
+  Applying authtoken.0002_auto_20160226_1747...
+\f2\b \cf15 \cb3  OK
+\f1\b0 \cf2 \cb3 \
+  Applying sessions.0001_initial...
+\f2\b \cf15 \cb3  OK
+\f1\b0 \cf2 \cb3 \
+  Applying useraccounts.0001_initial...
+\f2\b \cf15 \cb3  OK
+\f1\b0 \cf2 \cb3 \
+  Applying useraccounts.0002_auto_20170206_0842...
+\f2\b \cf15 \cb3  OK
+\f1\b0 \cf2 \cb3 \
+\cf10 \cb3 ~/Documents/flex_project_new
+\f2\b \cf11  (master)
+\f1\b0 \cf10 $\cf2 \cb3  heroku run backend/manage.py showmigrations\
+WARNING: This is the legacy Heroku CLI with limited functionality. Please install the latest CLI.\
+WARNING: On MacOS this can be done with 'brew install heroku' or with the MacOS package from https://cli.heroku.com\
+Running 
+\f2\b \cf14 \cb3 backend/manage.py showmigrations
+\f1\b0 \cf2 \cb3  on 
+\f3 \cf13 \cb3 \uc0\u11042 
+\f1  audiocloud\cf2 \cb3 ... up, run.4151 (Free)\
+
+\f2\b \cf2 \cb3 admin
+\f1\b0 \cf2 \cb3 \
+ [X] 0001_initial\
+ [X] 0002_logentry_remove_auto_add\
+
+\f2\b \cf2 \cb3 audio
+\f1\b0 \cf2 \cb3 \
+ [X] 0001_initial\
+ [X] 0002_track_user_id\
+
+\f2\b \cf2 \cb3 auth
+\f1\b0 \cf2 \cb3 \
+ [X] 0001_initial\
+ [X] 0002_alter_permission_name_max_length\
+ [X] 0003_alter_user_email_max_length\
+ [X] 0004_alter_user_username_opts\
+ [X] 0005_alter_user_last_login_null\
+ [X] 0006_require_contenttypes_0002\
+ [X] 0007_alter_validators_add_error_messages\
+ [X] 0008_alter_user_username_max_length\
+
+\f2\b \cf2 \cb3 authtoken
+\f1\b0 \cf2 \cb3 \
+ [X] 0001_initial\
+ [X] 0002_auto_20160226_1747\
+
+\f2\b \cf2 \cb3 contenttypes
+\f1\b0 \cf2 \cb3 \
+ [X] 0001_initial\
+ [X] 0002_remove_content_type_name\
+
+\f2\b \cf2 \cb3 sessions
+\f1\b0 \cf2 \cb3 \
+ [X] 0001_initial\
+
+\f2\b \cf2 \cb3 useraccounts
+\f1\b0 \cf2 \cb3 \
+ [X] 0001_initial\
+ [X] 0002_auto_20170206_0842\
+\cf10 \cb3 ~/Documents/flex_project_new
+\f2\b \cf11  (master)
+\f1\b0 \cf10 $\cf2 \cb3  heroku run backend/manage.py shell\
+WARNING: This is the legacy Heroku CLI with limited functionality. Please install the latest CLI.\
+WARNING: On MacOS this can be done with 'brew install heroku' or with the MacOS package from https://cli.heroku.com\
+Running 
+\f2\b \cf14 \cb3 backend/manage.py shell
+\f1\b0 \cf2 \cb3  on 
+\f3 \cf13 \cb3 \uc0\u11042 
+\f1  audiocloud\cf2 \cb3 ... up, run.7191 (Free)\
+from Python 2.7.14 (default, Sep 26 2017, 13:42:32) \
+[GCC 5.4.0 20160609] on linux2\
+Type "help", "copyright", "credits" or "license" for more information.\
+(InteractiveConsole)\
+>>> from audio.migrations.models\
+  File "<console>", line 1\
+    from audio.migrations.models\
+                               ^\
+SyntaxError: invalid syntax\
+>>> from audio.migrations.models import Track\
+Traceback (most recent call last):\
+  File "<console>", line 1, in <module>\
+ImportError: No module named models\
+>>> from models import Track\
+Traceback (most recent call last):\
+  File "<console>", line 1, in <module>\
+ImportError: No module named models\
+>>> from audio.migrations.model import Track\
+Traceback (most recent call last):\
+  File "<console>", line 1, in <module>\
+ImportError: No module named model\
+>>> from backend.audio.migrations.models import Track\
+Traceback (most recent call last):\
+  File "<console>", line 1, in <module>\
+ImportError: No module named backend.audio.migrations.models\
+>>> \
+KeyboardInterrupt\
+>>> \
+\cf10 \cb3 ~/Documents/flex_project_new
+\f2\b \cf11  (master)
+\f1\b0 \cf10 $\cf2 \cb3  heroku local\
+WARNING: This is the legacy Heroku CLI with limited functionality. Please install the latest CLI.\
+WARNING: On MacOS this can be done with 'brew install heroku' or with the MacOS package from https://cli.heroku.com\
+\cf17 \cb3 [WARN] No ENV file found\cf2 \cb3 \
+\cf18 \cb3 19:07:38 web.1   | \cf2 \cb3  [2017-11-13 19:07:38 -0800] [25454] [INFO] Starting gunicorn 19.6.0\
+\cf18 \cb3 19:07:38 web.1   | \cf2 \cb3  [2017-11-13 19:07:38 -0800] [25454] [INFO] Listening at: http://0.0.0.0:5000 (25454)\
+\cf18 \cb3 19:07:38 web.1   | \cf2 \cb3  [2017-11-13 19:07:38 -0800] [25454] [INFO] Using worker: sync\
+\cf18 \cb3 19:07:38 web.1   | \cf2 \cb3  [2017-11-13 19:07:38 -0800] [25458] [INFO] Booting worker with pid: 25458\
+\cf18 \cb3 19:08:02 web.1   | \cf2 \cb3  Not Found: /favicon.ico\
+\cf18 \cb3 19:14:18 web.1   | \cf2 \cb3  [2017-11-13 19:14:18 -0800] [25454] [INFO] Handling signal: winch\
+^C\cf17 \cb3 [WARN] Interrupted by User\cf2 \cb3 \
+\cf14 \cb3 [DONE] Killing all processes with signal  SIGINT\cf2 \cb3 \
+\cf18 \cb3 19:14:21 web.1   | \cf2 \cb3  [2017-11-13 19:14:21 -0800] [25454] [INFO] Handling signal: int\
+\cf10 \cb3 ~/Documents/flex_project_new
+\f2\b \cf11  (master)
+\f1\b0 \cf10 $\cf2 \cb3  \cf18 \cb3 19:14:21 web.1   | \cf2 \cb3  [2017-11-14 03:14:21 +0000] [25458] [INFO] Worker exiting (pid: 25458)\
+\cf18 \cb3 19:14:21 web.1   | \cf2 \cb3  [2017-11-13 19:14:21 -0800] [25454] [INFO] Shutting down: Master\
+\cf18 \cb3 19:14:21 web.1  \cf2 \cb3  \cf14 \cb3 Exited Successfully\
+\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf2 \cb3 \
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf10 \cb3 ~/Documents/flex_project_new
+\f2\b \cf11  (master)
+\f1\b0 \cf10 $\cf2 \cb3  heroku run python backend/manage.py loaddata backend/audio/fixtures/tracks.json \
+WARNING: This is the legacy Heroku CLI with limited functionality. Please install the latest CLI.\
+WARNING: On MacOS this can be done with 'brew install heroku' or with the MacOS package from https://cli.heroku.com\
+Running 
+\f2\b \cf14 \cb3 python backend/manage.py loaddata backend/audio/fixtures/tracks.json
+\f1\b0 \cf2 \cb3  on 
+\f3 \cf13 \cb3 \uc0\u11042 
+\f1  audiocloud\cf2 \cb3 ... up, run.4281 (Free)\
+Traceback (most recent call last):\
+  File "backend/manage.py", line 22, in <module>\
+    execute_from_command_line(sys.argv)\
+  File "/app/.heroku/python/lib/python2.7/site-packages/django/core/management/__init__.py", line 364, in execute_from_command_line\
+    utility.execute()\
+  File "/app/.heroku/python/lib/python2.7/site-packages/django/core/management/__init__.py", line 356, in execute\
+    self.fetch_command(subcommand).run_from_argv(self.argv)\
+  File "/app/.heroku/python/lib/python2.7/site-packages/django/core/management/base.py", line 283, in run_from_argv\
+    self.execute(*args, **cmd_options)\
+  File "/app/.heroku/python/lib/python2.7/site-packages/django/core/management/base.py", line 330, in execute\
+    output = self.handle(*args, **options)\
+  File "/app/.heroku/python/lib/python2.7/site-packages/django/core/management/commands/loaddata.py", line 69, in handle\
+    self.loaddata(fixture_labels)\
+  File "/app/.heroku/python/lib/python2.7/site-packages/django/core/management/commands/loaddata.py", line 115, in loaddata\
+    connection.check_constraints(table_names=table_names)\
+  File "/app/.heroku/python/lib/python2.7/site-packages/django/db/backends/postgresql/base.py", line 243, in check_constraints\
+    self.cursor().execute('SET CONSTRAINTS ALL IMMEDIATE')\
+  File "/app/.heroku/python/lib/python2.7/site-packages/django/db/backends/utils.py", line 80, in execute\
+    return super(CursorDebugWrapper, self).execute(sql, params)\
+  File "/app/.heroku/python/lib/python2.7/site-packages/django/db/backends/utils.py", line 65, in execute\
+    return self.cursor.execute(sql, params)\
+  File "/app/.heroku/python/lib/python2.7/site-packages/django/db/utils.py", line 94, in __exit__\
+    six.reraise(dj_exc_type, dj_exc_value, traceback)\
+  File "/app/.heroku/python/lib/python2.7/site-packages/django/db/backends/utils.py", line 63, in execute\
+    return self.cursor.execute(sql)\
+django.db.utils.IntegrityError: Problem installing fixtures: insert or update on table "audio_track" violates foreign key constraint "audio_track_user_id_id_3ed81da7_fk_auth_user_id"\
+DETAIL:  Key (user_id_id)=(1) is not present in table "auth_user".\
+\
+\cf10 \cb3 ~/Documents/flex_project_new
+\f2\b \cf11  (master)
+\f1\b0 \cf10 $\cf2 \cb3  heroku run python backend/manage.py createsuperuser\
+WARNING: This is the legacy Heroku CLI with limited functionality. Please install the latest CLI.\
+WARNING: On MacOS this can be done with 'brew install heroku' or with the MacOS package from https://cli.heroku.com\
+Running 
+\f2\b \cf14 \cb3 python backend/manage.py createsuperuser
+\f1\b0 \cf2 \cb3  on 
+\f3 \cf13 \cb3 \uc0\u11042 
+\f1  audiocloud\cf2 \cb3 ... up, run.1488 (Free)\
+Username (leave blank to use 'u50508'): admin\
+Email address: test@test.com\
+Password: \
+Password (again): \
+Token created\
+Superuser created successfully.\
+\cf10 \cb3 ~/Documents/flex_project_new
+\f2\b \cf11  (master)
+\f1\b0 \cf10 $\cf2 \cb3  heroku run python backend/manage.py loaddata backend/audio/fixtures/tracks.json \
+WARNING: This is the legacy Heroku CLI with limited functionality. Please install the latest CLI.\
+WARNING: On MacOS this can be done with 'brew install heroku' or with the MacOS package from https://cli.heroku.com\
+Running 
+\f2\b \cf14 \cb3 python backend/manage.py loaddata backend/audio/fixtures/tracks.json
+\f1\b0 \cf2 \cb3  on 
+\f3 \cf13 \cb3 \uc0\u11042 
+\f1  audiocloud\cf2 \cb3 ... up, run.2910 (Free)\
+Installed 10 object(s) from 1 fixture(s)\
+\cf10 \cb3 ~/Documents/flex_project_new
+\f2\b \cf11  (master)
+\f1\b0 \cf10 $\cf2 \cb3  \
+\
+\
+\
+\
+##################################################################################\
+\
+\cf10 \cb3 ~/Documents/flex_project_new
+\f2\b \cf11  (master)
+\f1\b0 \cf10 $\cf2 \cb3  heroku run python backend/manage.py loaddata backend/audio/fixtures/tracks.json \
+WARNING: This is the legacy Heroku CLI with limited functionality. Please install the latest CLI.\
+WARNING: On MacOS this can be done with 'brew install heroku' or with the MacOS package from https://cli.heroku.com\
+Running 
+\f2\b \cf14 \cb3 python backend/manage.py loaddata backend/audio/fixtures/tracks.json
+\f1\b0 \cf2 \cb3  on 
+\f3 \cf13 \cb3 \uc0\u11042 
+\f1  audiocloud\cf2 \cb3 ... up, run.5366 (Free)\
+Traceback (most recent call last):\
+  File "backend/manage.py", line 22, in <module>\
+    execute_from_command_line(sys.argv)\
+  File "/app/.heroku/python/lib/python2.7/site-packages/django/core/management/__init__.py", line 364, in execute_from_command_line\
+    utility.execute()\
+  File "/app/.heroku/python/lib/python2.7/site-packages/django/core/management/__init__.py", line 356, in execute\
+    self.fetch_command(subcommand).run_from_argv(self.argv)\
+  File "/app/.heroku/python/lib/python2.7/site-packages/django/core/management/base.py", line 283, in run_from_argv\
+    self.execute(*args, **cmd_options)\
+  File "/app/.heroku/python/lib/python2.7/site-packages/django/core/management/base.py", line 330, in execute\
+    output = self.handle(*args, **options)\
+  File "/app/.heroku/python/lib/python2.7/site-packages/django/core/management/commands/loaddata.py", line 69, in handle\
+    self.loaddata(fixture_labels)\
+  File "/app/.heroku/python/lib/python2.7/site-packages/django/core/management/commands/loaddata.py", line 115, in loaddata\
+    connection.check_constraints(table_names=table_names)\
+  File "/app/.heroku/python/lib/python2.7/site-packages/django/db/backends/postgresql/base.py", line 243, in check_constraints\
+    self.cursor().execute('SET CONSTRAINTS ALL IMMEDIATE')\
+  File "/app/.heroku/python/lib/python2.7/site-packages/django/db/backends/utils.py", line 80, in execute\
+    return super(CursorDebugWrapper, self).execute(sql, params)\
+  File "/app/.heroku/python/lib/python2.7/site-packages/django/db/backends/utils.py", line 65, in execute\
+    return self.cursor.execute(sql, params)\
+  File "/app/.heroku/python/lib/python2.7/site-packages/django/db/utils.py", line 94, in __exit__\
+    six.reraise(dj_exc_type, dj_exc_value, traceback)\
+  File "/app/.heroku/python/lib/python2.7/site-packages/django/db/backends/utils.py", line 63, in execute\
+    return self.cursor.execute(sql)\
+django.db.utils.IntegrityError: Problem installing fixtures: insert or update on table "audio_track" violates foreign key constraint "audio_track_user_id_id_3ed81da7_fk_auth_user_id"\
+DETAIL:  Key (user_id_id)=(1) is not present in table "auth_user".\
+\
+\cf10 \cb3 ~/Documents/flex_project_new
+\f2\b \cf11  (master)
+\f1\b0 \cf10 $\cf2 \cb3  postgres\
+postgres does not know where to find the server configuration file.\
+You must specify the --config-file or -D invocation option or set the PGDATA environment variable.\
+\cf10 \cb3 ~/Documents/flex_project_new
+\f2\b \cf11  (master)
+\f1\b0 \cf10 $\cf2 \cb3  postgres psql\
+postgres: invalid argument: "psql"\
+Try "postgres --help" for more information.\
+\cf10 \cb3 ~/Documents/flex_project_new
+\f2\b \cf11  (master)
+\f1\b0 \cf10 $\cf2 \cb3  psql\
+psql (9.6.1)\
+Type "help" for help.\
+\
+Home=# audiocloud\
+Home-# \
+Home-# \\connect audio cloud\
+FATAL:  role "cloud" does not exist\
+Previous connection kept\
+Home-# \\connect audiocloud\
+You are now connected to database "audiocloud" as user "Home".\
+audiocloud-# \\dt\
+                    List of relations\
+ Schema |            Name            | Type  |   Owner    \
+--------+----------------------------+-------+------------\
+ public | audio_track                | table | admincloud\
+ public | auth_group                 | table | admincloud\
+ public | auth_group_permissions     | table | admincloud\
+ public | auth_permission            | table | admincloud\
+ public | auth_user                  | table | admincloud\
+ public | auth_user_groups           | table | admincloud\
+ public | auth_user_user_permissions | table | admincloud\
+ public | authtoken_token            | table | admincloud\
+ public | django_admin_log           | table | admincloud\
+ public | django_content_type        | table | admincloud\
+ public | django_migrations          | table | admincloud\
+ public | django_session             | table | admincloud\
+(12 rows)\
+\
+audiocloud-# select * from auth_user;\
+ERROR:  syntax error at or near "audiocloud"\
+LINE 1: audiocloud\
+        ^\
+audiocloud=# desc auth_user;\
+ERROR:  syntax error at or near "desc"\
+LINE 1: desc auth_user;\
+        ^\
+audiocloud=# select * from auth_user;\
+ id |  password   | last_login | is_superuser | username | first_name | last_name | email | is_staff | is_active |      date_joined       \
+----+-------------+------------+--------------+----------+------------+-----------+-------+----------+-----------+------------------------\
+  1 | password123 |            | t            | admin    | test       | test      | test  | t        | t         | 2016-12-10 00:00:00-08\
+(1 row)\
+\
+...skipping...\
+ id |  password   | last_login | is_superuser | username | first_name | last_name | email | is_staff | is_active |      date_joined       \
+----+-------------+------------+--------------+----------+------------+-----------+-------+----------+-----------+------------------------\
+  1 | password123 |            | t            | admin    | test       | test      | test  | t        | t         | 2016-12-10 00:00:00-08\
+(1 row)\
+\
+
+\f2\b \cf2 \cb3 ~
+\f1\b0 \cf2 \cb3 \
+
+\f2\b \cf2 \cb3 ~
+\f1\b0 \cf2 \cb3 \
+
+\f2\b \cf2 \cb3 ~
+\f1\b0 \cf2 \cb3 \
+
+\f2\b \cf2 \cb3 ~
+\f1\b0 \cf2 \cb3 \
+
+\f2\b \cf2 \cb3 ~
+\f1\b0 \cf2 \cb3 \
+
+\f2\b \cf2 \cb3 ~
+\f1\b0 \cf2 \cb3 \
+
+\f2\b \cf2 \cb3 ~
+\f1\b0 \cf2 \cb3 \
+
+\f2\b \cf2 \cb3 ~
+\f1\b0 \cf2 \cb3 \
+
+\f2\b \cf2 \cb3 ~
+\f1\b0 \cf2 \cb3 \
+
+\f2\b \cf2 \cb3 ~
+\f1\b0 \cf2 \cb3 \
+
+\f2\b \cf2 \cb3 ~
+\f1\b0 \cf2 \cb3 \
+
+\f2\b \cf2 \cb3 ~
+\f1\b0 \cf2 \cb3 \
+
+\f2\b \cf2 \cb3 ~
+\f1\b0 \cf2 \cb3 \
+
+\f2\b \cf2 \cb3 ~
+\f1\b0 \cf2 \cb3 \
+
+\f2\b \cf2 \cb3 ~
+\f1\b0 \cf2 \cb3 \
+
+\f2\b \cf2 \cb3 ~
+\f1\b0 \cf2 \cb3 \
+
+\f2\b \cf2 \cb3 ~
+\f1\b0 \cf2 \cb3 \
+
+\f2\b \cf2 \cb3 ~
+\f1\b0 \cf2 \cb3 \
+
+\f2\b \cf2 \cb3 ~
+\f1\b0 \cf2 \cb3 \
+
+\f2\b \cf2 \cb3 ~
+\f1\b0 \cf2 \cb3 \
+
+\f2\b \cf2 \cb3 ~
+\f1\b0 \cf2 \cb3 \
+
+\f2\b \cf2 \cb3 ~
+\f1\b0 \cf2 \cb3 \
+
+\f2\b \cf2 \cb3 ~
+\f1\b0 \cf2 \cb3 \
+
+\f2\b \cf2 \cb3 ~
+\f1\b0 \cf2 \cb3 \
+
+\f2\b \cf2 \cb3 ~
+\f1\b0 \cf2 \cb3 \
+
+\f2\b \cf2 \cb3 ~
+\f1\b0 \cf2 \cb3 \
+
+\f2\b \cf2 \cb3 ~
+\f1\b0 \cf2 \cb3 \
+
+\f2\b \cf2 \cb3 ~
+\f1\b0 \cf2 \cb3 \
+
+\f2\b \cf2 \cb3 ~
+\f1\b0 \cf2 \cb3 \
+
+\f2\b \cf2 \cb3 ~
+\f1\b0 \cf2 \cb3 \
+
+\f2\b \cf2 \cb3 ~
+\f1\b0 \cf2 \cb3 \
+
+\f2\b \cf2 \cb3 ~
+\f1\b0 \cf2 \cb3 \
+
+\f2\b \cf2 \cb3 ~
+\f1\b0 \cf2 \cb3 \
+
+\f2\b \cf2 \cb3 ~
+\f1\b0 \cf2 \cb3 \
+
+\f2\b \cf2 \cb3 ~
+\f1\b0 \cf2 \cb3 \
+
+\f2\b \cf2 \cb3 ~
+\f1\b0 \cf2 \cb3 \
+
+\f2\b \cf2 \cb3 ~
+\f1\b0 \cf2 \cb3 \
+
+\f2\b \cf2 \cb3 ~
+\f1\b0 \cf2 \cb3 \
+
+\f2\b \cf2 \cb3 ~
+\f1\b0 \cf2 \cb3 \
+
+\f2\b \cf2 \cb3 ~
+\f1\b0 \cf2 \cb3 \
+
+\f2\b \cf2 \cb3 ~
+\f1\b0 \cf2 \cb3 \
+
+\f2\b \cf2 \cb3 ~
+\f1\b0 \cf2 \cb3 \
+
+\f2\b \cf2 \cb3 ~
+\f1\b0 \cf2 \cb3 \
+
+\f2\b \cf2 \cb3 ~
+\f1\b0 \cf2 \cb3 \
+
+\f2\b \cf2 \cb3 ~
+\f1\b0 \cf2 \cb3 \
+ ESCOD\
+ id |  password   | last_login | is_superuser | username | first_name | last_name | email | is_staff | is_active |      date_joined       \
+----+-------------+------------+--------------+----------+------------+-----------+-------+----------+-----------+------------------------\
+  1 | password123 |            | t            | admin    | test       | test      | test  | t        | t         | 2016-12-10 00:00:00-08\
+(1 row)\
+\
+
+\f2\b \cf2 \cb3 ~
+\f1\b0 \cf2 \cb3 \
+
+\f2\b \cf2 \cb3 ~
+\f1\b0 \cf2 \cb3 \
+
+\f2\b \cf2 \cb3 ~
+\f1\b0 \cf2 \cb3 \
+
+\f2\b \cf2 \cb3 ~
+\f1\b0 \cf2 \cb3 \
+
+\f2\b \cf2 \cb3 ~
+\f1\b0 \cf2 \cb3 \
+
+\f2\b \cf2 \cb3 ~
+\f1\b0 \cf2 \cb3 \
+
+\f2\b \cf2 \cb3 ~
+\f1\b0 \cf2 \cb3 \
+
+\f2\b \cf2 \cb3 ~
+\f1\b0 \cf2 \cb3 \
+
+\f2\b \cf2 \cb3 ~
+\f1\b0 \cf2 \cb3 \
+
+\f2\b \cf2 \cb3 ~
+\f1\b0 \cf2 \cb3 \
+
+\f2\b \cf2 \cb3 ~
+\f1\b0 \cf2 \cb3 \
+
+\f2\b \cf2 \cb3 ~
+\f1\b0 \cf2 \cb3 \
+
+\f2\b \cf2 \cb3 ~
+\f1\b0 \cf2 \cb3 \
+
+\f2\b \cf2 \cb3 ~
+\f1\b0 \cf2 \cb3 \
+
+\f2\b \cf2 \cb3 ~
+\f1\b0 \cf2 \cb3 \
+
+\f2\b \cf2 \cb3 ~
+\f1\b0 \cf2 \cb3 \
+
+\f2\b \cf2 \cb3 ~
+\f1\b0 \cf2 \cb3 \
+
+\f2\b \cf2 \cb3 ~
+\f1\b0 \cf2 \cb3 \
+
+\f2\b \cf2 \cb3 ~
+\f1\b0 \cf2 \cb3 \
+
+\f2\b \cf2 \cb3 ~
+\f1\b0 \cf2 \cb3 \
+
+\f2\b \cf2 \cb3 ~
+\f1\b0 \cf2 \cb3 \
+
+\f2\b \cf2 \cb3 ~
+\f1\b0 \cf2 \cb3 \
+
+\f2\b \cf2 \cb3 ~
+\f1\b0 \cf2 \cb3 \
+
+\f2\b \cf2 \cb3 ~
+\f1\b0 \cf2 \cb3 \
+
+\f2\b \cf2 \cb3 ~
+\f1\b0 \cf2 \cb3 \
+
+\f2\b \cf2 \cb3 ~
+\f1\b0 \cf2 \cb3 \
+
+\f2\b \cf2 \cb3 ~
+\f1\b0 \cf2 \cb3 \
+
+\f2\b \cf2 \cb3 ~
+\f1\b0 \cf2 \cb3 \
+
+\f2\b \cf2 \cb3 ~
+\f1\b0 \cf2 \cb3 \
+
+\f2\b \cf2 \cb3 ~
+\f1\b0 \cf2 \cb3 \
+
+\f2\b \cf2 \cb3 ~
+\f1\b0 \cf2 \cb3 \
+
+\f2\b \cf2 \cb3 ~
+\f1\b0 \cf2 \cb3 \
+
+\f2\b \cf2 \cb3 ~
+\f1\b0 \cf2 \cb3 \
+
+\f2\b \cf2 \cb3 ~
+\f1\b0 \cf2 \cb3 \
+
+\f2\b \cf2 \cb3 ~
+\f1\b0 \cf2 \cb3 \
+
+\f2\b \cf2 \cb3 ~
+\f1\b0 \cf2 \cb3 \
+
+\f2\b \cf2 \cb3 ~
+\f1\b0 \cf2 \cb3 \
+
+\f2\b \cf2 \cb3 ~
+\f1\b0 \cf2 \cb3 \
+
+\f2\b \cf2 \cb3 ~
+\f1\b0 \cf2 \cb3 \
+
+\f2\b \cf2 \cb3 ~
+\f1\b0 \cf2 \cb3 \
+
+\f2\b \cf2 \cb3 ~
+\f1\b0 \cf2 \cb3 \
+
+\f2\b \cf2 \cb3 ~
+\f1\b0 \cf2 \cb3 \
+
+\f2\b \cf2 \cb3 ~
+\f1\b0 \cf2 \cb3 \
+
+\f2\b \cf2 \cb3 ~
+\f1\b0 \cf2 \cb3 \
+
+\f2\b \cf2 \cb3 ~
+\f1\b0 \cf2 \cb3 \
+audiocloud=# select * from auth_user\\G;\
+Invalid command \\G;. Try \\? for help.\
+audiocloud-# select * from auth_user;\
+ERROR:  syntax error at or near "select"\
+LINE 2: select * from auth_user;\
+        ^\
+audiocloud=# select * from auth_user;\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 \cb1 \CocoaLigature1 \
+}
