@@ -57,6 +57,6 @@ loadImage('/img/tiles.png')
   sprites.draw('ground',context, 45,62);
 
 
-  context.drawImage(image, 0, 0, 16, 16,
-                           32,32,16,16);
+  // context.drawImage(image, 0, 0, 16, 16,
+  //                          32,32,16,16);
 });
