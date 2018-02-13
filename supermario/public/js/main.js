@@ -14,13 +14,22 @@ function drawBackground(background, context, sprites) {
     });
 }
 
+function loadMarioSprite(){
+  return loadImage('/img/characters.gif')
+  .then(image => {
+  //  console.log('image loaded',image);
+      const sprites = new SpriteSheet(image);
+      sprites.define('idle', 276, 44, 16, 16);
+      return sprites;
+    });
+}
 function loadBackgroundSprites(){
   return loadImage('/img/tiles.png')
   .then(image => {
   //  console.log('image loaded',image);
       const sprites = new SpriteSheet(image);
-      sprites.define('ground', 0, 0);
-      sprites.define('sky', 3, 23);
+      sprites.defineTile('ground', 0, 0);
+      sprites.defineTile('sky', 3, 23);
       return sprites;
     });
 }
@@ -34,14 +43,16 @@ function loadBackgroundSprites(){
 //   resultB
 // ]) => {});
 Promise.all([
+  loadMarioSprite(),
   loadBackgroundSprites(),
   loadLevel('1-1')
 ])
-.then(([sprites,level]) => {
+.then(([marioSprite, sprites,level]) => {
   //console.log('level loaded',level);
   level.backgrounds.forEach(bg => {
     drawBackground(bg, context, sprites);
   });
+  marioSprite.draw('idle',context,64,64);
 });
 
 // Image and level loads in parallel
