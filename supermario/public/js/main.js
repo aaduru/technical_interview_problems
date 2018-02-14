@@ -9,7 +9,9 @@ const context = canvas.getContext('2d');
 
 function createSpriteLayer(sprite, pos) {
   return function drawSpriteLayer(context){
-    sprite.draw('idle', context, pos.x , pos.y);
+    for (let i = 0; i < 20; i++) {
+      sprite.draw('idle', context, pos.x + i * 16 , pos.y);
+    }
   }
 }
 // Promise.all([
@@ -25,22 +27,22 @@ Promise.all([
   loadBackgroundSprites(),
   loadLevel('1-1')
 ])
-.then(([marioSprite, sprites,level]) => {
+.then(([marioSprite, backgroundSprites,level]) => {
   //console.log('level loaded',level);
   // const backgroundBuffer = document.createElement('canvas');
   // backgroundBuffer.width = 256;
   // backgroundBuffer.height = 240;
   //
   // level.backgrounds.forEach(bg => {
-  //   drawBackground(bg, backgroundBuffer.getContext('2d'), sprites);
+  //   drawBackground(bg, backgroundBuffer.getContext('2d'), backgroundSprites);
   // });
   const comp = new Compositor();
-  const backgroundLayer = createBackgroundLayer(level.backgrounds, sprites);
+  const backgroundLayer = createBackgroundLayer(level.backgrounds, backgroundSprites);
   comp.layers.push(backgroundLayer);
 
   const pos = {
-    x: 64,
-    y: 64,
+    x: 0,
+    y: 0,
   };
 
 // update function helps to move mario around using the requestAnimationFrame function
