@@ -15,7 +15,31 @@ function drawBackground(background, context, sprites) {
     });
 }
 
+class Compositor {
+    constructor() {
+        this.layers = [];
+    }
 
+    draw(context) {
+        this.layers.forEach(layer => {
+            layer(context);
+        });
+    }
+}
+
+function createBackgroundLayer(backgrounds, sprites) {
+    const buffer = document.createElement('canvas');
+    buffer.width = 256;
+    buffer.height = 240;
+
+    backgrounds.forEach(background => {
+        drawBackground(background, buffer.getContext('2d'), sprites);
+    });
+
+    return function drawBackgroundLayer(context) {
+        context.drawImage(buffer, 0, 0);
+    };
+}
 // Promise.all([
 //   promiseA,
 //   promiseB
@@ -31,14 +55,16 @@ Promise.all([
 ])
 .then(([marioSprite, sprites,level]) => {
   //console.log('level loaded',level);
-
-  const backgroundBuffer = document.createElement('canvas');
-  backgroundBuffer.width = 256;
-  backgroundBuffer.height = 240;
-
-  level.backgrounds.forEach(bg => {
-    drawBackground(bg, backgroundBuffer.getContext('2d'), sprites);
-  });
+  // const backgroundBuffer = document.createElement('canvas');
+  // backgroundBuffer.width = 256;
+  // backgroundBuffer.height = 240;
+  //
+  // level.backgrounds.forEach(bg => {
+  //   drawBackground(bg, backgroundBuffer.getContext('2d'), sprites);
+  // });
+  const comp = new Compositor();
+  const backgroundLayer = createBackgroundLayer(level.backgrounds, sprites);
+  comp.layers.push(backgroundLayer);
 
   const pos = {
     x: 64,
@@ -49,7 +75,8 @@ Promise.all([
 // when that function is called the background has to be constantly updated along with the mario to avoid trail
 
   function update() {
-    context.drawImage(backgroundBuffer, 0 , 0);
+    //context.drawImage(backgroundBuffer, 0 , 0);
+    comp.draw(context);
     marioSprite.draw('idle',context,pos.x,pos.y);
     pos.x += 2;
     pos.y += 2;
