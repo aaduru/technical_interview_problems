@@ -40,6 +40,12 @@ function createBackgroundLayer(backgrounds, sprites) {
         context.drawImage(buffer, 0, 0);
     };
 }
+
+function createSpriteLayer(sprite, pos) {
+  return function drawSpriteLayer(context){
+    sprite.draw('idle', context, pos.x , pos.y);
+  }
+}
 // Promise.all([
 //   promiseA,
 //   promiseB
@@ -74,10 +80,13 @@ Promise.all([
 // update function helps to move mario around using the requestAnimationFrame function
 // when that function is called the background has to be constantly updated along with the mario to avoid trail
 
+  const spriteLayer = createSpriteLayer(marioSprite, pos);
+  comp.layers.push(spriteLayer);
+  
   function update() {
     //context.drawImage(backgroundBuffer, 0 , 0);
     comp.draw(context);
-    marioSprite.draw('idle',context,pos.x,pos.y);
+    //marioSprite.draw('idle',context,pos.x,pos.y);
     pos.x += 2;
     pos.y += 2;
     requestAnimationFrame(update);
