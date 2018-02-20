@@ -1,5 +1,15 @@
 confirm("I understand confirm!");
 
+
+
+function displayCanvas() {
+    var x = document.createElement("CANVAS");
+    var ctx = x.getContext("2d");
+    ctx.fillStyle = "#FF0000";
+    ctx.fillRect(20, 20, 150, 100);
+    document.body.appendChild(x);
+}
+
 // var age = prompt("What's your age");
 // if (age < 13) {
 //     console.log("you are not allowed to play");
@@ -31,3 +41,27 @@ confirm("I understand confirm!");
 // var userAnswer = "";
 //
 // userAnswer = prompt("Do you want to race Bieber on stage?");
+
+
+
+
+
+
+
+// var canvas = document.getElementById('canvas'); //finds Original Canvas
+//     img = document.createElement('img');
+//     img.src = 'images/a.jpg'; //stores image src
+//
+//     var canv = document.createElement('canvas'); // creates new canvas element
+//     canv.id = 'canvasdummy'; // gives canvas id
+//     canv.height = canvas.height; //get original canvas height
+//     canv.width = canvas.width; // get original canvas width
+//     document.body.appendChild(canv); // adds the canvas to the body element
+//
+//     var canvas1 = document.getElementById('canvasdummy'); //find new canvas we created
+//     var context = canvas1.getContext('2d');
+//
+//     context.drawImage(img, 0, 0, canvas.width, canvas.height); //draws background image
+//     context.drawImage(canvas, 0, 0); //draws original canvas on top of background
+//     cscreen = canvas1.toDataURL(); //generates PNG of newly created canvas
+//     document.body.removeChild(canv); // removes new canvas
