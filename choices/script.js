@@ -5,9 +5,17 @@ confirm("I understand confirm!");
 function displayCanvas() {
     var x = document.createElement("CANVAS");
     var ctx = x.getContext("2d");
-    ctx.fillStyle = "#FF0000";
-    ctx.fillRect(20, 20, 150, 100);
     document.body.appendChild(x);
+
+    var img = new Image();
+    img.onload = function(){       // /*or*/  img.addEventListener("load", function(){
+      ctx.drawImage(img,0,0);       //          ctx.drawImage(img,0,0);
+    };                                //      };
+    img.src = './img/pic3.jpeg';
+
+
+
+
 }
 
 // var age = prompt("What's your age");
