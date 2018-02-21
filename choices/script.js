@@ -13,7 +13,8 @@ function displayCanvas() {
     };                                //      };
     img.src = './img/pic3.jpeg';
 
-
+    document.getElementById("clickme").disabled = true;
+		alert("Button has been disabled.");
 
 
 }
