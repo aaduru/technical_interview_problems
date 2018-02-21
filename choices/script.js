@@ -15,21 +15,12 @@ function displayCanvas() {
     img.onload = function(){       // /*or*/  img.addEventListener("load", function(){
       img.width = 600;
       img.height = 500;
-      x.width  = img.width;
-      x.height = img.height;
+      x.width  = img.width ;
+      x.height = img.height ;
       ctx.drawImage(img,0,0);       //          ctx.drawImage(img,0,0);
+      ctx.fillStyle = "white";
     };                                //      };
 
-    // var img = new Image();
-    // img.onload = function(){       // /*or*/  img.addEventListener("load", function(){
-    //   var width = parseInt(img.width);
-    //   var height = parseInt(img.height);
-    //   ctx.drawImage(img,0,0,img.width,img.height,0,0,img.width,img.height);
-    //
-    // };                                //      };
-    // img.src = './img/pic3.jpeg';
-    // console.log(img.height);
-    // console.log(img.width);
 
     document.getElementById("clickme").disabled = true;
 		alert("Button has been disabled.");
