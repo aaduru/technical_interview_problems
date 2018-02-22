@@ -25,6 +25,11 @@ function displayCanvas() {
     document.getElementById("clickme").disabled = true;
 		alert("Button has been disabled.");
 
+    let msg = document.createElement("message");
+    let butt = document.createElement("button");
+
+    console.log(msg);
+    console.log(butt);
 
 }
 
