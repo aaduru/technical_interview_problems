@@ -1,11 +1,11 @@
-confirm("I understand confirm!");
+//confirm("I understand confirm!");
 
 
 
 function displayCanvas() {
-    var x = document.createElement("CANVAS");
-    var ctx = x.getContext("2d");
-    document.body.appendChild(x);
+    var canvas = document.createElement("CANVAS");
+    var ctx = canvas.getContext("2d");
+    document.body.appendChild(canvas);
 
     var img = new Image();
 
@@ -15,21 +15,32 @@ function displayCanvas() {
     img.onload = function(){       // /*or*/  img.addEventListener("load", function(){
       img.width = 600;
       img.height = 500;
-      x.width  = img.width ;
-      x.height = img.height ;
+      canvas.width  = img.width ;
+      canvas.height = img.height ;
       ctx.drawImage(img,0,0);       //          ctx.drawImage(img,0,0);
       ctx.fillStyle = "white";
+
+
+
+      let msg = document.createElement("P");
+      canvas.appendChild(msg);
+      msg.textContent = 'Welcome';
+      console.log(msg.textContent);
     };                                //      };
 
 
     document.getElementById("clickme").disabled = true;
-		alert("Button has been disabled.");
+		//alert("Button has been disabled.");
 
-    let msg = document.createElement("message");
-    let butt = document.createElement("button");
-
-    console.log(msg);
-    console.log(butt);
+    // let msg = document.createElement("P");
+    // let butt = document.createElement("button");
+    // canvas.appendChild(msg);
+    // canvas.appendChild(butt);
+    //
+    // console.log(msg);
+    // console.log(butt);
+    // msg.textContent = 'Welcome';
+    // console.log(msg.textContent);
 
 }
 
