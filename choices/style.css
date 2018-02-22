@@ -32,6 +32,7 @@ canvas {
   bottom: 0;
   left: 0;
   right: 0;
+  color: #0000ff; 
 
   border: 2px solid blue;
 }
@@ -39,5 +40,5 @@ canvas {
 
 p {
   color: blue;
-  
+
 }

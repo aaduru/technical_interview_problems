@@ -21,12 +21,15 @@ function displayCanvas() {
       ctx.fillStyle = "white";
 
 
+      ctx.font = 'bold 10pt Calibri';
+      ctx.fillText('Hello World!', 150, 100);
+      ctx.fillStyle = "#0000ff"; 
 
-      let msg = document.createElement("P");
-      canvas.appendChild(msg);
-      msg.textContent = 'Welcome';
-      console.log(msg.textContent);
+
+
     };                                //      };
+
+
 
 
     document.getElementById("clickme").disabled = true;
