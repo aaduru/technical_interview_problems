@@ -7,9 +7,16 @@ ctx.fillStyle = "yellow";
 ctx.fillText('Hello World!', 150, 100);
 
 
-
+//
+// canvas.onclick = function(){
+//   alert("mouse was clicked");
+// }
 canvas.onclick = function(){
   alert("mouse was clicked");
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  ctx.font = 'bold 10pt Calibri';
+  ctx.fillStyle = "red";
+  ctx.fillText('mouse clicked', 150, 100);
 }
 
 
