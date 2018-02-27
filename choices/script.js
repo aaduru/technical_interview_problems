@@ -4,8 +4,12 @@
 var canvas = document.createElement("CANVAS");
 canvas.id = 'canvas';
 var ctx = canvas.getContext("2d");
-document.body.appendChild(canvas);
+//document.body.appendChild(canvas);
+
+
 function imageLoad() {
+
+  document.body.appendChild(canvas);
   var img = new Image();
 
   img.src = './img/pic5.jpg';
@@ -26,10 +30,7 @@ function imageLoad() {
 
 function displayCanvas() {
 
-
     imageLoad();
-
-
     document.getElementById("clickme").disabled = true;
 
     var count = 0;
@@ -46,13 +47,18 @@ function displayCanvas() {
         console.log("here");
         document.body.removeChild(canvas);
         alert("canvas removed");
+        document.getElementById("clickme").disabled = false;
       }
     }
 
-    if (count == 2) {
-      document.getElementById("canvas").disabled = true;
-      document.getElementById("clickme").enable = true;
-    }
+    // if (count == 2) {
+    //   console.log("in here");
+    //   document.getElementById("canvas").disabled = true;
+    //   document.getElementById("clickme").disabled = false;
+    //
+    //   var x = document.getElementById("clickme").disabled = false;
+    //   document.getElementById("clickme").innerHTML = x;
+    // }
 		//alert("Button has been disabled.");
 
     // let msg = document.createElement("P");
