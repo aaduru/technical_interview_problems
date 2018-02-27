@@ -1,38 +1,58 @@
 //confirm("I understand confirm!");
 
 
+var canvas = document.createElement("CANVAS");
+canvas.id = 'canvas';
+var ctx = canvas.getContext("2d");
+document.body.appendChild(canvas);
+function imageLoad() {
+  var img = new Image();
+
+  img.src = './img/pic5.jpg';
+  //console.log(img);
+
+  img.onload = function(){       // /*or*/  img.addEventListener("load", function(){
+    img.width = 600;
+    img.height = 500;
+    canvas.width  = img.width ;
+    canvas.height = img.height ;
+    ctx.drawImage(img,0,0);       //          ctx.drawImage(img,0,0);
+
+    ctx.font = 'bold 10pt Calibri';
+    ctx.fillStyle = "yellow";
+    ctx.fillText('Hello World!', 150, 100);
+  };                                //      };
+}
 
 function displayCanvas() {
-    var canvas = document.createElement("CANVAS");
-    var ctx = canvas.getContext("2d");
-    document.body.appendChild(canvas);
-
-    var img = new Image();
-
-    img.src = './img/pic5.jpg';
-    //console.log(img);
-
-    img.onload = function(){       // /*or*/  img.addEventListener("load", function(){
-      img.width = 600;
-      img.height = 500;
-      canvas.width  = img.width ;
-      canvas.height = img.height ;
-      ctx.drawImage(img,0,0);       //          ctx.drawImage(img,0,0);
-      ctx.fillStyle = "white";
 
 
-      ctx.font = 'bold 10pt Calibri';
-      ctx.fillText('Hello World!', 150, 100);
-      ctx.fillStyle = "#0000ff"; 
-
-
-
-    };                                //      };
-
-
+    imageLoad();
 
 
     document.getElementById("clickme").disabled = true;
+
+    var count = 0;
+
+    canvas.onclick = function(){
+      alert("mouse was clicked");
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      ctx.font = 'bold 10pt Calibri';
+      ctx.fillStyle = "red";
+      ctx.fillText('mouse clicked', 150, 100);
+      console.log(count);
+      count += 1;
+      if (count == 2) {
+        console.log("here");
+        document.body.removeChild(canvas);
+        alert("canvas removed");
+      }
+    }
+
+    if (count == 2) {
+      document.getElementById("canvas").disabled = true;
+      document.getElementById("clickme").enable = true;
+    }
 		//alert("Button has been disabled.");
 
     // let msg = document.createElement("P");

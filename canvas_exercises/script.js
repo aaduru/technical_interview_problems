@@ -1,4 +1,5 @@
 var canvas = document.createElement("CANVAS");
+canvas.id = 'canvas';
 var ctx = canvas.getContext("2d");
 document.body.appendChild(canvas);
 
@@ -11,14 +12,26 @@ ctx.fillText('Hello World!', 150, 100);
 // canvas.onclick = function(){
 //   alert("mouse was clicked");
 // }
+var count = 0;
+
 canvas.onclick = function(){
   alert("mouse was clicked");
   ctx.clearRect(0, 0, canvas.width, canvas.height);
   ctx.font = 'bold 10pt Calibri';
   ctx.fillStyle = "red";
   ctx.fillText('mouse clicked', 150, 100);
+  console.log(count);
+  count += 1;
+  if (count == 2) {
+    console.log("here");
+    document.body.removeChild(canvas);
+    alert("canvas removed");
+  }
 }
 
+if (count == 2) {
+  document.getElementById("canvas").disabled = true;
+}
 
 
 
