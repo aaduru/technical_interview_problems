@@ -33,6 +33,10 @@ if (count == 2) {
   document.getElementById("canvas").disabled = true;
 }
 
+function openWin() {
+    window.open("test.html", "_blank");
+}
+
 
 
 
