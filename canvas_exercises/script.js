@@ -34,6 +34,9 @@ if (count == 2) {
 }
 
 function openWin() {
+    window.open("https://www.google.com", "_blank");
+}
+function openWin2() {
     window.open("test.html", "_blank");
 }
 
