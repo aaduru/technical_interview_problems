@@ -7,12 +7,12 @@ var ctx = canvas.getContext("2d");
 //document.body.appendChild(canvas);
 
 
-function imageLoad() {
+function imageLoad(text,path) {
 
   document.body.appendChild(canvas);
   var img = new Image();
 
-  img.src = './img/pic5.jpg';
+  img.src = path ;
   //console.log(img);
 
   img.onload = function(){       // /*or*/  img.addEventListener("load", function(){
@@ -23,14 +23,15 @@ function imageLoad() {
     ctx.drawImage(img,0,0);       //          ctx.drawImage(img,0,0);
 
     ctx.font = 'bold 10pt Calibri';
-    ctx.fillStyle = "yellow";
-    ctx.fillText('Hello World!', 150, 100);
+    ctx.fillStyle = 'yellow';
+    ctx.fillText(text, 150, 100);
+    //ctx.fillText('Hello World!', 150, 100);
   };                                //      };
 }
 
 function displayCanvas() {
 
-    imageLoad();
+    imageLoad('Hello World','./img/pic5.jpg');
     document.getElementById("clickme").disabled = true;
 
     var count = 0;
@@ -38,6 +39,7 @@ function displayCanvas() {
     canvas.onclick = function(){
       alert("mouse was clicked");
       ctx.clearRect(0, 0, canvas.width, canvas.height);
+      //imageLoad();
       ctx.font = 'bold 10pt Calibri';
       ctx.fillStyle = "red";
       ctx.fillText('mouse clicked', 150, 100);
