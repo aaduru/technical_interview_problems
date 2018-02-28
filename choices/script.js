@@ -7,7 +7,7 @@ var ctx = canvas.getContext("2d");
 //document.body.appendChild(canvas);
 
 
-function imageLoad(text,path) {
+function imageLoad(text,path,color) {
 
   document.body.appendChild(canvas);
   var img = new Image();
@@ -16,14 +16,14 @@ function imageLoad(text,path) {
   //console.log(img);
 
   img.onload = function(){       // /*or*/  img.addEventListener("load", function(){
-    img.width = 600;
-    img.height = 500;
+    //img.width = 600;
+    //img.height = 500;
     canvas.width  = img.width ;
     canvas.height = img.height ;
     ctx.drawImage(img,0,0);       //          ctx.drawImage(img,0,0);
 
     ctx.font = 'bold 10pt Calibri';
-    ctx.fillStyle = 'yellow';
+    ctx.fillStyle = color;
     ctx.fillText(text, 150, 100);
     //ctx.fillText('Hello World!', 150, 100);
   };                                //      };
@@ -31,7 +31,7 @@ function imageLoad(text,path) {
 
 function displayCanvas() {
 
-    imageLoad('Hello World','./img/pic5.jpg');
+    imageLoad('Hello World','./img/pic5.jpg','yellow');
     document.getElementById("clickme").disabled = true;
 
     var count = 0;
@@ -39,14 +39,14 @@ function displayCanvas() {
     canvas.onclick = function(){
       alert("mouse was clicked");
       ctx.clearRect(0, 0, canvas.width, canvas.height);
-      //imageLoad();
-      ctx.font = 'bold 10pt Calibri';
-      ctx.fillStyle = "red";
-      ctx.fillText('mouse clicked', 150, 100);
+      imageLoad('Mouse was Clicked','./img/grandma.jpg','red' );
+      // ctx.font = 'bold 10pt Calibri';
+      // ctx.fillStyle = "red";
+      // ctx.fillText('mouse clicked', 150, 100);
       console.log(count);
       count += 1;
       if (count == 2) {
-        console.log("here");
+        //console.log("here");
         document.body.removeChild(canvas);
         alert("canvas removed");
         document.getElementById("clickme").disabled = false;
