@@ -53,6 +53,7 @@ function displayCanvas() {
       }
     }
 
+
     // if (count == 2) {
     //   console.log("in here");
     //   document.getElementById("canvas").disabled = true;
@@ -73,6 +74,10 @@ function displayCanvas() {
     // msg.textContent = 'Welcome';
     // console.log(msg.textContent);
 
+}
+
+function imageCredits() {
+    window.open("credits.html", "_blank");
 }
 
 // var age = prompt("What's your age");
