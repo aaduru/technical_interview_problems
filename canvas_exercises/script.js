@@ -97,7 +97,19 @@ var rectHeight = 50;
 var rectWidth = 100;
 var rectX = 10;
 var rectY = 10;
-ctx.fillText("text inside rectangle",200 + 50 ,100 + 25);
+//ctx.fillText("text inside rectangle",200 + 50 ,100 + 25);
+
+var img = new Image();
+
+img.src = "./canvas.png" ;
+//console.log(img);
+
+img.onload = function(){
+  // canvas.width  = img.width ;
+  // canvas.height = img.height ;
+
+  ctx.drawImage(img,210,102,75,45);
+};
 
 
 
