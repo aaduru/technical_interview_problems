@@ -84,6 +84,20 @@ function roundRect(ctx, x, y, width, height, radius, fill, stroke) {
 }
 
 
+ctx.lineWidth = 4;
+ctx.strokeStyle = "#ff00ff";
+ctx.fillStyle = "#abc";
+roundRect(ctx, 200, 100, 100, 50, 10, true);
+ctx.font = 'bold 5pt Calibri';
+ctx.fillStyle = "red";
+ctx.textAlign="center";
+ctx.textBaseline = "middle";
+ctx.fillStyle = "#ff00ff";
+var rectHeight = 50;
+var rectWidth = 100;
+var rectX = 10;
+var rectY = 10;
+ctx.fillText("text inside rectangle",200 + 50 ,100 + 25);
 
 
 
