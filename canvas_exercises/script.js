@@ -2,7 +2,7 @@
 // canvas.id = 'canvas';
 // var ctx = canvas.getContext("2d");
 // document.body.appendChild(canvas);
-
+//
 // ctx.font = 'bold 10pt Calibri';
 // ctx.fillStyle = "yellow";
 // ctx.fillText('Hello World!', 150, 100);
@@ -118,36 +118,42 @@
 
 
 
-var canvas = document.createElement("CANVAS");
-canvas.id = 'canvas';
-var context = canvas.getContext("2d");
-document.body.appendChild(canvas);
+var canrect = document.createElement("CANVAS");
+canrect.id = 'canrect';
+var context = canrect.getContext("2d");
+//canvas.appendChild(canrect);
+document.body.appendChild(canrect);
 
+const path = new Path2D();
+path.rect(250, 350, 200, 100);
+path.rect(25,72,32,32);
+path.closePath();
 
-const path = new Path2D()
-path.rect(250, 350, 200, 100)
-path.rect(25,72,32,32)
-path.closePath()
+//context.fillStyle = "#FFFFFF"
+context.fillStyle = "pink";
+context.fill(path);
+context.lineWidth = 2;
+context.strokeStyle = "green";
+context.stroke(path);
+// context.fillStyle = "#FFFFFF"
+// context.fillStyle = "rgba(225,225,225,0.5)"
+// context.fill(path)
+// context.lineWidth = 2
+// context.strokeStyle = "#000000"
+// context.stroke(path)
 
-context.fillStyle = "#FFFFFF"
-context.fillStyle = "rgba(225,225,225,0.5)"
-context.fill(path)
-context.lineWidth = 2
-context.strokeStyle = "#000000"
-context.stroke(path)
-
-function getXY(canvas, event){
-  const rect = canvas.getBoundingClientRect()
-  const y = event.clientY - rect.top
-  const x = event.clientX - rect.left
-  return {x:x, y:y}
+function getXY(canrect, event){
+  const rect = canrect.getBoundingClientRect();
+  const y = event.clientY - rect.top;
+  const x = event.clientX - rect.left;
+  return {x:x, y:y};
 }
 
 document.addEventListener("click",  function (e) {
-  const XY = getXY(canvas, e)
+  const XY = getXY(canrect, e);
   if(context.isPointInPath(path, XY.x, XY.y)) {
     // Do Something with the click
-    alert("button clicked")
+    alert("button clicked");
   }
 }, false)
 
