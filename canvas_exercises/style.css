@@ -4,8 +4,8 @@
   padding: 0;
   margin: auto;
   display: block;
-  width: 800px;
-  height: 600px;
+  /* width: 400px;
+  height: 300px; */
   position: absolute;
   top: 0;
   bottom: 0;
@@ -15,3 +15,11 @@
   background-color: black;
   border: 10px solid blue;
 }
+/*
+#canrect {
+
+
+  color: pink;
+  background-color: white;
+  border: 10px solid yellow;
+} */
