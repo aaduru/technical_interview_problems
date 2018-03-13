@@ -4,8 +4,8 @@
   padding: 0;
   margin: auto;
   display: block;
-  width: 600px;
-  height: 400px;
+  width: 800px;
+  height: 600px;
   position: absolute;
   top: 0;
   bottom: 0;
@@ -22,4 +22,9 @@
   color: pink;
   background-color: white;
   border: 10px solid yellow;
+} */
+
+/* 
+canvas {
+  background: grey;
 } */
