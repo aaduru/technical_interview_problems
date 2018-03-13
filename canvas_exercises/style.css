@@ -1,11 +1,11 @@
-#canvas {
+#myCanvas {
 
 
   padding: 0;
   margin: auto;
   display: block;
-  /* width: 400px;
-  height: 300px; */
+  width: 600px;
+  height: 400px;
   position: absolute;
   top: 0;
   bottom: 0;
@@ -15,8 +15,8 @@
   background-color: black;
   border: 10px solid blue;
 }
-/*
-#canrect {
+
+/* #canrect {
 
 
   color: pink;
