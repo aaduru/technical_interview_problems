@@ -1,3 +1,7 @@
+// const canvas = document.createElement("CANVAS");
+// canvas.id = 'myCanvas';
+// document.body.appendChild(canvas);
+// const context = canvas.getContext('2d');
 
 
 
@@ -9,6 +13,9 @@ const path = new Path2D()
 //path.rect(250, 350, 200, 100)
 path.rect(25,72,32,32)
 path.closePath()
+
+
+var count = 0;
 
 context.fillStyle = "#FFFFFF"
 context.fillStyle = "rgba(225,225,225,0.5)"
@@ -25,12 +32,25 @@ function getXY(canvas, event){
 }
 
 document.addEventListener("click",  function (e) {
+  count = count + 1;
+  console.log(count);
   const XY = getXY(canvas, e)
   if(context.isPointInPath(path, XY.x, XY.y)) {
     // Do Something with the click
     alert("clicked in rectangle")
   }
+  if (count == 2) {
+    console.log("here");
+    document.body.removeChild(canvas);
+  }
 }, false)
+
+
+// if (count > 2) {
+//   console.log("here");
+//   document.body.removeChild(canvas);
+// }
+
 
 
 
