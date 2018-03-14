@@ -11,6 +11,10 @@ const context = canvas.getContext("2d")
 
 function start() {
 
+  if (document.body.contains(canvas) == false) {
+    console.log("canvas has been removed");
+    document.body.appendChild(canvas);
+  }
   const path = new Path2D()
   //path.rect(250, 350, 200, 100)
   path.rect(25,72,32,32)
@@ -33,30 +37,52 @@ function start() {
     return {x:x, y:y}
   }
 
-  document.addEventListener("click",  function (e) {
-    count = count + 1;
-    console.log(count);
-    const XY = getXY(canvas, e)
-    if(context.isPointInPath(path, XY.x, XY.y)) {
-      // Do Something with the click
-      alert("clicked in rectangle")
+  // document.addEventListener("click",  function (e) {
+  //   count = count + 1;
+  //   console.log(count);
+  //   const XY = getXY(canvas, e)
+  //   if(context.isPointInPath(path, XY.x, XY.y)) {
+  //     // Do Something with the click
+  //     // alert("clicked in rectangle")
+  //     console.log("clicked in rectangle");
+  //   }
+  //
+  // }, false)
+  //
+  // if (count == 3) {
+  //   count = 0;
+  //   console.log("here");
+  //   document.body.removeChild(canvas);
+  //   console.log(" count = 3 ,canvas has been removed");
+  //
+  //
+  // }
+
+  var count = 0;
+
+    canvas.onclick = function(e){
+      //alert("mouse was clicked");
+      const XY = getXY(canvas, e)
+      if(context.isPointInPath(path, XY.x, XY.y)) {
+          // Do Something with the click
+          // alert("clicked in rectangle")
+          console.log("clicked in rectangle");
+        } else {
+          console.log("clicked outside rectangle");
+        }
+
+      console.log(count);
+      count += 1;
+      if (count == 2) {
+        console.log("here");
+        document.body.removeChild(canvas);
+        alert("canvas removed");
+
+      }
     }
-    if (count == 2) {
-      console.log("here");
-      document.body.removeChild(canvas);
-      count = 0;
-      //document.getElementById("myCanvas").disabled = true;
-    }
-  }, false)
 }
 
 
-
-
-// if (count > 2) {
-//   console.log("here");
-//   document.body.removeChild(canvas);
-// }
 
 
 
