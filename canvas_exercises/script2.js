@@ -9,41 +9,48 @@
 const canvas = document.getElementById("myCanvas")
 const context = canvas.getContext("2d")
 
-const path = new Path2D()
-//path.rect(250, 350, 200, 100)
-path.rect(25,72,32,32)
-path.closePath()
+function start() {
+
+  const path = new Path2D()
+  //path.rect(250, 350, 200, 100)
+  path.rect(25,72,32,32)
+  path.closePath()
 
 
-var count = 0;
+  var count = 0;
 
-context.fillStyle = "#FFFFFF"
-context.fillStyle = "rgba(225,225,225,0.5)"
-context.fill(path)
-context.lineWidth = 2
-context.strokeStyle = "#000000"
-context.stroke(path)
+  context.fillStyle = "#FFFFFF"
+  context.fillStyle = "rgba(225,225,225,0.5)"
+  context.fill(path)
+  context.lineWidth = 2
+  context.strokeStyle = "#000000"
+  context.stroke(path)
 
-function getXY(canvas, event){
-  const rect = canvas.getBoundingClientRect()
-  const y = event.clientY - rect.top
-  const x = event.clientX - rect.left
-  return {x:x, y:y}
+  function getXY(canvas, event){
+    const rect = canvas.getBoundingClientRect()
+    const y = event.clientY - rect.top
+    const x = event.clientX - rect.left
+    return {x:x, y:y}
+  }
+
+  document.addEventListener("click",  function (e) {
+    count = count + 1;
+    console.log(count);
+    const XY = getXY(canvas, e)
+    if(context.isPointInPath(path, XY.x, XY.y)) {
+      // Do Something with the click
+      alert("clicked in rectangle")
+    }
+    if (count == 2) {
+      console.log("here");
+      document.body.removeChild(canvas);
+      count = 0;
+      //document.getElementById("myCanvas").disabled = true;
+    }
+  }, false)
 }
 
-document.addEventListener("click",  function (e) {
-  count = count + 1;
-  console.log(count);
-  const XY = getXY(canvas, e)
-  if(context.isPointInPath(path, XY.x, XY.y)) {
-    // Do Something with the click
-    alert("clicked in rectangle")
-  }
-  if (count == 2) {
-    console.log("here");
-    document.body.removeChild(canvas);
-  }
-}, false)
+
 
 
 // if (count > 2) {
