@@ -26,6 +26,18 @@ function imageLoad(text,path,color) {
     ctx.fillStyle = color;
     ctx.fillText(text, 150, 100);
     //ctx.fillText('Hello World!', 150, 100);
+
+
+    const path = new Path2D();
+    path.rect(25,72,32,32);
+    path.closePath();
+
+    ctx.fillStyle = "#FFFFFF";
+    ctx.fillStyle = "rgba(225,225,225,0.5)";
+    ctx.fill(path);
+    ctx.lineWidth = 2;
+    ctx.strokeStyle = "#000000";
+    ctx.stroke(path);
   };                                //      };
 }
 
@@ -36,6 +48,17 @@ function displayCanvas() {
 
     var count = 0;
 
+    // const path = new Path2D();
+    // path.rect(25,72,32,32);
+    // path.closePath();
+    //
+    // ctx.fillStyle = "#FFFFFF";
+    // ctx.fillStyle = "rgba(225,225,225,0.5)";
+    // ctx.fill(path);
+    // ctx.lineWidth = 2;
+    // ctx.strokeStyle = "#000000";
+    // ctx.stroke(path);
+
     canvas.onclick = function(){
       alert("mouse was clicked");
       ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -43,6 +66,8 @@ function displayCanvas() {
       // ctx.font = 'bold 10pt Calibri';
       // ctx.fillStyle = "red";
       // ctx.fillText('mouse clicked', 150, 100);
+
+
       console.log(count);
       count += 1;
       if (count == 2) {
