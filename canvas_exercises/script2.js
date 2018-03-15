@@ -58,7 +58,7 @@ function start() {
   //
   // }
 
-  var count = 0;
+  //var count = 0;
 
     canvas.onclick = function(e){
       //alert("mouse was clicked");
