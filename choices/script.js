@@ -33,7 +33,7 @@ function imageLoad(text,path,color) {
 
 
     //const canvaspath = new Path2D();
-    canvaspath.rect(25,72,32,32);
+    canvaspath.rect(30,100,30,30);
     canvaspath.closePath();
 
     ctx.fillStyle = "#FFFFFF";
@@ -52,19 +52,22 @@ function displayCanvas() {
 
     var count = 0;
 
-    // const path = new Path2D();
-    // path.rect(25,72,32,32);
-    // path.closePath();
-    //
-    // ctx.fillStyle = "#FFFFFF";
-    // ctx.fillStyle = "rgba(225,225,225,0.5)";
-    // ctx.fill(path);
-    // ctx.lineWidth = 2;
-    // ctx.strokeStyle = "#000000";
-    // ctx.stroke(path);
 
-    canvas.onclick = function(){
-      alert("mouse was clicked");
+    function getXY(canvas, event){
+      const rect = canvas.getBoundingClientRect()
+      console.log(rect);
+      const y = (event.clientY - rect.top) - 45
+      const x = (event.clientX - rect.left) - 15
+      console.log(event.clientY);
+      console.log(event.clientX);
+      console.log(x);
+      console.log(y);
+      return {x:x, y:y}
+    }
+
+    canvas.onclick = function(e){
+      //alert("mouse was clicked");
+      console.log("mouse was clicked");
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       imageLoad('Mouse was Clicked','./img/grandma.jpg','red' );
       // ctx.font = 'bold 10pt Calibri';
@@ -73,13 +76,32 @@ function displayCanvas() {
 
 
       console.log(count);
+
+      const XY = getXY(canvas, e)
+      console.log(XY);
+      console.log(canvaspath.rect);
+      if(ctx.isPointInPath(canvaspath, XY.x, XY.y)) {
+          console.log("here");
+          console.log("clicked in rectangle");
+        } else {
+          console.log("clicked outside rectangle");
+        }
+
       count += 1;
-      if (count == 2) {
+      if (count == 5) {
         //console.log("here");
         document.body.removeChild(canvas);
         alert("canvas removed");
         document.getElementById("clickme").disabled = false;
+
       }
+      // count += 1;
+      // if (count == 2) {
+      //   //console.log("here");
+      //   document.body.removeChild(canvas);
+      //   alert("canvas removed");
+      //   document.getElementById("clickme").disabled = false;
+      // }
     }
 
 
