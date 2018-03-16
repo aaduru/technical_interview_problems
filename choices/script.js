@@ -7,6 +7,10 @@ var ctx = canvas.getContext("2d");
 //document.body.appendChild(canvas);
 
 
+
+const canvaspath = new Path2D();
+
+
 function imageLoad(text,path,color) {
 
   document.body.appendChild(canvas);
@@ -28,16 +32,16 @@ function imageLoad(text,path,color) {
     //ctx.fillText('Hello World!', 150, 100);
 
 
-    const path = new Path2D();
-    path.rect(25,72,32,32);
-    path.closePath();
+    //const canvaspath = new Path2D();
+    canvaspath.rect(25,72,32,32);
+    canvaspath.closePath();
 
     ctx.fillStyle = "#FFFFFF";
     ctx.fillStyle = "rgba(225,225,225,0.5)";
-    ctx.fill(path);
+    ctx.fill(canvaspath);
     ctx.lineWidth = 2;
     ctx.strokeStyle = "#000000";
-    ctx.stroke(path);
+    ctx.stroke(canvaspath);
   };                                //      };
 }
 
