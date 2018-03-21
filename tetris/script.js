@@ -16,7 +16,7 @@ const matrix = [
 
 function draw() {
 
-  drawMatrix(matrix, {x:5, y:5});
+  drawMatrix(player.matrix, player.pos);
 }
 function drawMatrix(matrix, offset) {
 
@@ -32,4 +32,14 @@ function drawMatrix(matrix, offset) {
     });
   });
 }
-draw();
+
+function update(){
+  draw();
+  requestAnimationFrame(update);
+}
+
+const player = {
+  pos: {x: 5, y: 5},
+  matrix: matrix,
+}
+update();
