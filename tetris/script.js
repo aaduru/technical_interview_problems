@@ -14,6 +14,10 @@ const matrix = [
                ];
 
 
+function draw() {
+
+  drawMatrix(matrix, {x:5, y:5});
+}
 function drawMatrix(matrix, offset) {
 
   matrix.forEach((row,y) => {
@@ -28,5 +32,4 @@ function drawMatrix(matrix, offset) {
     });
   });
 }
-
-drawMatrix(matrix, {x:5, y:5});
+draw();
