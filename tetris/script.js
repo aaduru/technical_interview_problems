@@ -3,8 +3,7 @@ const context = canvas.getContext('2d');
 
 context.scale(20,20);
 
-context.fillStyle = "#000";
-context.fillRect(0,0,canvas.width,canvas.height);
+
 
 //t piece
 const matrix = [
@@ -15,7 +14,8 @@ const matrix = [
 
 
 function draw() {
-
+  context.fillStyle = "#000";
+  context.fillRect(0,0,canvas.width,canvas.height);
   drawMatrix(player.matrix, player.pos);
 }
 function drawMatrix(matrix, offset) {
