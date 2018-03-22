@@ -12,6 +12,16 @@ const matrix = [
                  [0,1,0],
                ];
 
+const player = {
+                 pos: {x: 5, y: 5},
+                 matrix: matrix,
+               }
+
+
+let lastTime = 0;
+let dropCounter = 0;
+let dropInterval = 1000;
+
 
 function draw() {
   context.fillStyle = "#000";
@@ -33,13 +43,18 @@ function drawMatrix(matrix, offset) {
   });
 }
 
-function update(){
+function update(time = 0){
+  const deltaTime = time - lastTime;
+  lastTime = time;
+  //console.log(deltaTime);
+  dropCounter += deltaTime;
+  if (dropCounter > dropInterval) {
+    player.pos.y++;
+    dropCounter = 0;
+  }
   draw();
   requestAnimationFrame(update);
 }
 
-const player = {
-  pos: {x: 5, y: 5},
-  matrix: matrix,
-}
+
 update();
