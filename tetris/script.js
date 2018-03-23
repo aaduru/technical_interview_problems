@@ -56,5 +56,7 @@ function update(time = 0){
   requestAnimationFrame(update);
 }
 
-
+document.addEventListener('keydown', event => {
+  console.log(event);
+})
 update();
