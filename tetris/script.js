@@ -22,6 +22,17 @@ let lastTime = 0;
 let dropCounter = 0;
 let dropInterval = 1000;
 
+function createMatrix(w,h){
+  const matrix = [];
+  while (h--) {
+    matrix.push(new Array(w).fill(0));
+  }
+  return matrix;
+}
+
+const gameBoard = createMatrix(12,20);
+// console.log(gameBoard);
+// console.table(gameBoard);
 
 function draw() {
   context.fillStyle = "#000";
@@ -42,6 +53,18 @@ function drawMatrix(matrix, offset) {
     });
   });
 }
+
+function merge(gameBoard, player){
+
+  player.matrix.forEach((row, y) => {
+    row.forEach((value, x) => {
+      if (value !== 0) {
+        gameBoard[y + player.pos.y][x + player.pos.x] = value;
+      }
+    });
+  });
+}
+
 function playerDrop(){
 
   player.pos.y++ ;
@@ -64,7 +87,7 @@ function update(time = 0){
 }
 
 document.addEventListener('keydown', event => {
-  console.log(event);
+  //console.log(event);
 
   if (event.keyCode === 37) {
     player.pos.x-- ;
