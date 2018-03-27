@@ -22,6 +22,19 @@ let lastTime = 0;
 let dropCounter = 0;
 let dropInterval = 1000;
 
+function collide(gameBoard, player){
+  const [m, o] = [player.matrix, player.pos];
+  for (let y = 0; y < m.length; ++y){
+    for (let x = 0; x < m[y].length; ++x){
+      if (m[y][x] !== 0 &&
+        (gameBoard[y + o.y] &&
+        gameBoard[y + o.y][x + o.x]) !==0){
+          return true;
+        }
+    }
+  }
+}
+
 function createMatrix(w,h){
   const matrix = [];
   while (h--) {
@@ -68,6 +81,11 @@ function merge(gameBoard, player){
 function playerDrop(){
 
   player.pos.y++ ;
+  if (collide(gameBoard, player)) {
+    player.pos.y--;
+    merge(gameBoard, player);
+    player.pos.y = 0;
+  }
   dropCounter = 0;
 }
 
