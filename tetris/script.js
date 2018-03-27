@@ -50,6 +50,7 @@ const gameBoard = createMatrix(12,20);
 function draw() {
   context.fillStyle = "#000";
   context.fillRect(0,0,canvas.width,canvas.height);
+  drawMatrix(gameBoard, {x: 0, y: 0 });
   drawMatrix(player.matrix, player.pos);
 }
 function drawMatrix(matrix, offset) {
