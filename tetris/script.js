@@ -97,6 +97,10 @@ function playerMove(direction){
   }
 }
 
+function playerRotate(dir) {
+  rotate(player.matrix, dir);
+}
+
 function rotate(matrix, dir) {
   for(let y =0; y < matrix.length; y++){
     for(let x = 0; x < y; x++){
@@ -144,6 +148,9 @@ document.addEventListener('keydown', event => {
       // player.pos.y++ ;
       // dropCounter = 0;
       playerDrop();
+    }
+    else if (event.keyCode === 38) {
+      alert("you cannot use up arrow");
     }
 
 });
