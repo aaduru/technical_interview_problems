@@ -98,7 +98,13 @@ function playerMove(direction){
 }
 
 function playerRotate(dir) {
+  let offset = 1;
   rotate(player.matrix, dir);
+
+  while(collide(gameBoard, matrix)) {
+    player.pos.x += offset;
+    offset = -(offset + (offset > 0 ? 1 : -1));
+  }
 }
 
 function rotate(matrix, dir) {
