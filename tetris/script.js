@@ -152,6 +152,12 @@ document.addEventListener('keydown', event => {
     else if (event.keyCode === 38) {
       alert("you cannot use up arrow");
     }
+    else if (event.keyCode === 81) {
+      playerRotate(-1);
+    }
+    else if (event.keyCode === 87) {
+      playerRotate(-1);
+    }
 
 });
 // document.addEventListener('keydown', event => {
